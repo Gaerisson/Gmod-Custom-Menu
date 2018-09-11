@@ -33,7 +33,7 @@ setInterval(function(){
 function ClearSoundsDecals(){
 	lua.Run( "RunConsoleCommand( 'stopsound' );" );
 	lua.Run( "RunConsoleCommand( 'r_cleardecals' );" );
-	lua.Run( "RunConsoleCommand( 'echo', 'Sounds stopped / Decals cleared !' );" );
+	console.log("Sounds stopped / Decals cleared !");
 }
 
 function ServerPrev(id,sh){
