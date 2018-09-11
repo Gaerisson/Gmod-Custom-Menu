@@ -15,7 +15,8 @@ var subscriptions = new Subscriptions();
 setTimeout(function(){
 	console.log( "#########################################################" );
 	console.log( "############### Gmod Custom Menu Loaded ! ###############" );
-	console.log( "############### Gmod Custom Menu Loaded ! ###############" );
+	console.log( "##### https://github.com/Gaerisson/Gmod-Custom-Menu #####" );
+	console.log( "##### Don,'t forget to check for update manuelly :) #####" );
 	console.log( "#########################################################" );
 }, 3500);
 
