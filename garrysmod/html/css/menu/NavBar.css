@@ -23,15 +23,14 @@
 	right: 30%;
 	left: 30%;
 	position: absolute;
-	display: inline-flex;
 }
 
 .middle-nav li:hover{
 	background-color: rgba(19, 73, 165, 0.5) !important;
 	border-width: 0px 0px 4px 0px !important;
-	margin-top: 4px !important;
+	margin-bottom: -2px !important;
 	border-color: #007dff !important;
-	-webkit-transition: margin-top 0.50s, border 0.50s, background-color 0.50s;
+	-webkit-transition: margin-bottom 0.50s, border 0.50s, background-color 0.50s;
 }
 
 .middle-nav .srv-inf{
@@ -43,6 +42,8 @@
 .middle-nav li{
 	max-width: 150px;
 	background-color: rgba(0, 0, 0, 0.47) !important;
+	float:none !important;
+	display:inline-block !important;
 }
 
 .middle-nav p{
@@ -123,18 +124,18 @@
 {
 	background-color: rgba(250, 250, 250, 0.52);
 	height: 40px;
-	transition: height 0.50s, background-color 0.50s;
+	-webkit-transition: height 0.50s, background-color 0.50s;
 }
 
 #NavBar LI, #NavBar .button
 {
 	display: inline-block;
 	background-color: rgba(250, 250, 250, 0.22);
-	height: 43px;
+	height: 40px;
 	padding-left: 35px;
 	position: relative;
-	margin-right: 2px;
-	margin-top: 7px;
+	margin-right: -3px;
+	margin-bottom: -2px;
 	font-size: 11px;
 	text-align: left;
 	font-weight: bold;
@@ -142,7 +143,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	transition: margin-top 0.50s,border-width 0.50s, background-color 0.50s;
+	-webkit-transition: margin-bottom 0.50s,border-width 0.50s, background-color 0.50s;
 	border: solid 1px white;
 	border-width: 0px 0px 2px 0px;
 	border-color: #fff;
@@ -166,7 +167,7 @@ UL.popup LI
 	border-width: 0px 0px 0px 2px;
 	border-style: solid;
 	border-color: #4485ff;
-	transition: border 0.30s, background-color 0.50s, margin-right 0.50s;
+	-webkit-transition: border 0.30s, background-color 0.50s, margin-right 0.50s;
 }
 
 UL.popup LI:hover
@@ -174,13 +175,13 @@ UL.popup LI:hover
 	background-color: rgba(250, 250, 250, 0.50);
 	border-width: 0px 0px 0px 4px;
 	border-color: #4485ff;
-	transition: border 0.30s, background-color 0.50s;
+	-webkit-transition: border 0.30s, background-color 0.50s;
 }
 
 UL.popup LI:hover span
 {
 	margin-right: 2px;
-	transition: margin-right 0.50s;
+	-webkit-transition: margin-right 0.50s;
 }
 
 #NavBar .button
@@ -195,27 +196,23 @@ UL.popup LI:hover span
 div.backtomenu a img
 {
 	padding-left: 7px;
-	transition: padding-left 0.5s;
 	-webkit-transition: padding-left 0.5s;
 }
 
 div.backtomenu a:hover img
 {
 	padding-left: 0px;
-	transition: padding-left 0.5s;
 	-webkit-transition: padding-left 0.5s;
 }
 
 div.backtomenu a span
 {
-	transition: padding-left 0.5s;
 	-webkit-transition: padding-left 0.5s;
 }
 
 div.backtomenu a:hover span
 {
 	padding-left: 17px !important;
-	transition: padding-left 0.5s;
 	-webkit-transition: padding-left 0.5s;
 }
 

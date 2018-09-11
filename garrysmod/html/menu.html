@@ -62,8 +62,8 @@
 	</ul>
 
 <div class="middle-nav">
-
-		<li onmouseover="ServerPrev(1,1);" onmouseout="ServerPrev(1,0);" onclick="ConnectServer(1)">
+<center>
+		<li id="server1" onmouseover="ServerPrev(1,1);" onmouseout="ServerPrev(1,0);" onclick="ConnectServer(1)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -72,7 +72,7 @@
 			</a>
 		</li>
 
-		<li onmouseover="ServerPrev(2,1);" onmouseout="ServerPrev(2,0);" onclick="ConnectServer(2)">
+		<li id="server2" onmouseover="ServerPrev(2,1);" onmouseout="ServerPrev(2,0);" onclick="ConnectServer(2)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -81,7 +81,7 @@
 			</a>
 		</li>
 
-		<li onmouseover="ServerPrev(3,1);" onmouseout="ServerPrev(3,0);" onclick="ConnectServer(3)">
+		<li id="server3" onmouseover="ServerPrev(3,1);" onmouseout="ServerPrev(3,0);" onclick="ConnectServer(3)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -90,7 +90,7 @@
 			</a>
 		</li>
 
-		<li onmouseover="ServerPrev(4,1);" onmouseout="ServerPrev(4,0);" onclick="ConnectServer(4)">
+		<li id="server4"  onmouseover="ServerPrev(4,1);" onmouseout="ServerPrev(4,0);" onclick="ConnectServer(4)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -99,7 +99,7 @@
 			</a>
 		</li>
 
-		<li onmouseover="ServerPrev(5,1);" onmouseout="ServerPrev(5,0);" nclick="ConnectServer(5)">
+		<li id="server5" onmouseover="ServerPrev(5,1);" onmouseout="ServerPrev(5,0);" onclick="ConnectServer(5)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -108,7 +108,7 @@
 			</a>
 		</li>
 
-		<li onmouseover="ServerPrev(6,1);" onmouseout="ServerPrev(6,0);" onclick="ConnectServer(6)">
+		<li id="server6" onmouseover="ServerPrev(6,1);" onmouseout="ServerPrev(6,0);" onclick="ConnectServer(6)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -117,7 +117,7 @@
 			</a>
 		</li>
 
-		<li onmouseover="ServerPrev(7,1);" onmouseout="ServerPrev(7,0);" onclick="ConnectServer(7)">
+		<li id="server7" onmouseover="ServerPrev(7,1);" onmouseout="ServerPrev(7,0);" onclick="ConnectServer(7)">
 			<a href="#/">
 				<img id="srv-icon" src='img/main/menu/server.png'>
 				<div class="srv-inf">
@@ -125,19 +125,18 @@
 				</div>
 			</a>
 		</li>
+</center>
 </div>
 
 	<ul class="center" ng-show="InGame">
 
-		<li class="bigicon" style="margin: 7px 0px 0px 10px;padding: 0px 20px 0px 20px;" ng-click="ClearSoundsDecals()">
+		<li class="bigicon" style="margin: 7px 0px 0px 10px;padding: 0px 20px 0px 20px;" onclick="ClearSoundsDecals()">
 			<a href="#/"><img src='img/main/menu/clean.png'></a>
 		</li>
 
 		<li class="bigicon" ng-show="ShowFavButton" ng-click="AddServerToFavorites()">
 			<a href="#/"><img id="fav-icon" src='img/favourite_server.png'><span ng-Tranny="'favorite_this_server'"></span></a>
 		</li>
-
-
 
 		<!-- <li ng-click="Disconnect()"><a href="#/"><img src='img/disconnect.png'><span ng-Tranny="'disconnect'"></span></a></li> -->
 
@@ -214,9 +213,9 @@
 </ul>
 
 
-	<div id="srv-banner" class="srv-banner" style="opacity:0;">
+	<div id="srv-banner" class="srv-banner" style="opacity:0.8;">
 		<center>
-			<img id="srv-prev" src="http://vps.gaerisson-softs.fr/ServerSignature/137.74.192.37:27035.png" />
+			<img id="srv-prev" onmouseover="UpdBanner()" src="http://gaerisson-softs.fr/logos/gmodmenu/banner.php" />
 		</center>
 	</div>
 

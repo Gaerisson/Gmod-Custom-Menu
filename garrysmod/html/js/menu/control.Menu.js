@@ -11,6 +11,7 @@ var GamemodeDetails = {}
 var MapIndex = {}
 var AnnSpeed=300;
 var subscriptions = new Subscriptions();
+var menuversion="1109";
 
 setTimeout(function(){
 	console.log( "#########################################################" );
@@ -18,8 +19,14 @@ setTimeout(function(){
 	console.log( "##### https://github.com/Gaerisson/Gmod-Custom-Menu #####" );
 	console.log( "##### Don,'t forget to check for update manuelly :) #####" );
 	console.log( "#########################################################" );
+	window['srvdefbanner']="http://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion;
+	$('#srv-prev')[0].src=window['srvdefbanner'];
 }, 3500);
 
+function UpdBanner(){
+	window['srvdefbanner']="http://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion;
+	$('#srv-prev')[0].src=window['srvdefbanner'];
+}
 
 function ClearSoundsDecals(){
 	lua.Run( "RawConsoleCommand( 'stopsound' );" );
@@ -28,18 +35,28 @@ function ClearSoundsDecals(){
 }
 
 function ServerPrev(id,sh){
-	if($('#srv'+id+'-addr')[0]){
+	if($('#srv'+id+'-addr')[0].innerText!==""){
 		if(sh==1){
-			$('#srv-banner')[0].style="-webkit-transition: opacity 0.50s;opacity:0.8;"
 			$('#srv-prev')[0].src=window['srv'+id+'banner'].src;
 		}else if(sh==0){
-			$('#srv-banner')[0].style="-webkit-transition: opacity 0.50s;opacity:0;"
+			$('#srv-prev')[0].src=window['srvdefbanner'];
 		}
 	}
 }
 
+if(!IN_ENGINE){
+	setTimeout(function(){
+		AddSmartFavServer( 1, "test1", "172.168.0.20:27015", "0/25" );
+		AddSmartFavServer( 2, "test2", "17.182.228.165:27015", "95/130" );
+		AddSmartFavServer( 6, "test3", "17.182.228.165:27015", "23/45" );
+		setTimeout(function(){
+			FinishedLoadFavServer();
+		}, 1500);
+	}, 500);
+}
+
 function AddSmartFavServer( id, name, address, players ){
-	if($('#srv'+id+'-name')[0] || $('#srv'+id+'-addr')[0]){
+	if($('#srv'+id+'-name')[0] && $('#srv'+id+'-addr')[0]){
 		$('#srv'+id+'-name')[0].innerText=name;
 		$('#srv'+id+'-addr')[0].innerText=address;
 		$('#srv'+id+'-play')[0].innerText=players;
@@ -50,12 +67,20 @@ function AddSmartFavServer( id, name, address, players ){
 
 function FinishedLoadFavServer(){
 	console.log("Finished loading Fav Server !");
+	var i=0;
+	for(i=1;i<=7;i++){
+		if(!window['srv'+i+'banner']){
+			// console.log("Removing server"+i+" - "+document.getElementById('server'+i).innerHTML);
+			var srv = document.getElementById('server'+i);
+			srv.parentNode.removeChild(srv);
+			// $('#server'+i)[0].remove();
+		}
+	}
 }
 
 function ConnectServer(id){
 	if($('#srv'+id+'-addr')[0]){
 		lua.Run( "JoinServer( %s );", String( $('#srv'+id+'-addr')[0].innerText ) );
-		lua.Run( "print( 'connect %s' );", String( $('#srv'+id+'-addr')[0].innerText ) );
 	}
 }
 

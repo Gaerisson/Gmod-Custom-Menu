@@ -286,7 +286,7 @@ A.bglink
 {
 	color: white;
 	font-weight: bold;
-	background-color: #5AF9;
+	background-color: rgba(0, 132, 255, 0.47);
 	padding: 4px 10px;
 	margin-top: 6px;
 	margin-right: 12px;
@@ -299,7 +299,7 @@ A.bglink
 
 A.bglink:hover
 {
-	background-color: #92C8FF99;
+	background-color: rgba(124, 176, 255, 0.68);
 	border: 1px solid #007dff;
 	-webkit-transition: border 0.50s, background-color 0.50s;
 }

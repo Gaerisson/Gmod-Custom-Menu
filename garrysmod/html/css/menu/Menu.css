@@ -256,7 +256,7 @@ UL.category LI.icon
 	color: white;
 	cursor: pointer;
 	vertical-align: middle;
-	background-color: #0080FF99;
+	background-color: rgba(0, 104, 255, 0.6);
 	-webkit-transition: background-color 0.50s;
 }
 

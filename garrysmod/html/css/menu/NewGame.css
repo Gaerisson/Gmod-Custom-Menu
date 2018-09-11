@@ -77,7 +77,7 @@ UL.category LI.mapicon span {
 
 UL.category LI.mapicon.selected
 {
-	background-color: #0071ff4d;
+	background-color: rgba(0, 82, 255, 0.28);
 	border: solid 1px white;
 	border-width: 0px 0px 3px 0px;
 	border-color: #2c87e0;
@@ -138,7 +138,7 @@ gamesettings select
     line-height: 28px;
     cursor: pointer;
     font-weight: bold;
-    background-color: #35ca35cc;
+    background-color: rgba(75, 207, 50, 0.75);
     color: white;
     cursor: pointer;
     vertical-align: middle;
@@ -166,6 +166,7 @@ gamesettings select
 .dropdown .contents div
 {
 	padding: 4px 15px;
+	color: black;
 }
 
 .dropdown .contents div:hover
@@ -280,7 +281,7 @@ gamesettings .control-numeric input[type=text]
 .controls LI.category .count
 {
 	float: right;
-	background-color: #ffffff80;
+	background-color: rgba(255, 255, 255, 0.48);
 	padding: 2px 5px;
 	margin: 5px;
 	color: #aaa;
