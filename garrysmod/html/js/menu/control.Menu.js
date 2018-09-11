@@ -13,10 +13,12 @@ var AnnSpeed=300;
 var subscriptions = new Subscriptions();
 
 setTimeout(function(){
-	lua.Run( "RawConsoleCommand( 'echo #########################################################' );" );
-	lua.Run( "RawConsoleCommand( 'echo ############### Gmod Custom Menu Loaded ! ###############' );" );
-	lua.Run( "RawConsoleCommand( 'echo #########################################################' );" );
+	console.log( "#########################################################" );
+	console.log( "############### Gmod Custom Menu Loaded ! ###############" );
+	console.log( "############### Gmod Custom Menu Loaded ! ###############" );
+	console.log( "#########################################################" );
 }, 3500);
+
 
 function ClearSoundsDecals(){
 	lua.Run( "RawConsoleCommand( 'stopsound' );" );
