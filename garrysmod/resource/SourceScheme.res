@@ -77,8 +77,8 @@
 		Frame.TitleTextInsetX							"16"
 		Frame.ClientInsetX								"8"
 		Frame.ClientInsetY								"6"
-		Frame.BgColor									"50 50 50 200"				[$WIN32]
-		Frame.BgColor									"50 50 50 200"				[$X360]
+		Frame.BgColor									"50 50 50 250"				[$WIN32]
+		Frame.BgColor									"50 50 50 250"				[$X360]
 		Frame.OutOfFocusBgColor							"25 25 25 240"				[$WIN32]
 		Frame.OutOfFocusBgColor							"25 25 25 192"				[$X360]
 		Frame.FocusTransitionEffectTime					"0.3"									// time it takes for a window to fade in/out on focus/out of focus
@@ -220,7 +220,7 @@
 
 		MessageDialog.MatchmakingBG						"46 43 42 255"				[$X360]
 		MessageDialog.MatchmakingBGBlack				"22 22 22 255"				[$X360]
-		
+
 		MatchmakingMenuItemTitleColor					"200 184 151 255"			[$X360]
 		MatchmakingMenuItemDescriptionColor				"200 184 151 255"			[$X360]
 
@@ -407,8 +407,8 @@
 			}
 			"1"	[!$LINUX]
 			{
-				"name"		"Verdana" 
-				"tall"		"16" 
+				"name"		"Verdana"
+				"tall"		"16"
 				"weight"	"600"
 				"antialias" "1"
 			}
@@ -433,7 +433,7 @@
 				"outline" "1"
 			}
 		}
-		
+
 		"AchievementTitleFontSmaller"
 		{
 			"1"
@@ -445,8 +445,8 @@
 				//"outline" "1"
 			}
 		}
-		
-		
+
+
 		"AchievementDescriptionFont"
 		{
 			"1"
@@ -468,7 +468,7 @@
 				"yres"	 "481 10000"
 			}
 		}
-		
+
 		GameUIButtons
 		{
 			"1"	[$X360]
@@ -726,7 +726,7 @@
 				"antialias"		"1"
 			}
 		}
-		
+
 		StatsTitle	[$WIN32]
 		{
 			"1"
@@ -738,7 +738,7 @@
 				"antialias"		"1"
 			}
 		}
-		
+
 		StatsText	[$WIN32]
 		{
 			"1"
@@ -750,7 +750,7 @@
 				"antialias"		"1"
 			}
 		}
-		
+
 		AchievementItemTitle	[$WIN32]
 		{
 			"1"
@@ -776,7 +776,7 @@
 			}
 		}
 
-		
+
 		StatsPageText
 		{
 			"1"
@@ -789,7 +789,7 @@
 				"antialias"		"1"
 			}
 		}
-		
+
 		AchievementItemTitleLarge	[$WIN32]
 		{
 			"1"
@@ -802,7 +802,7 @@
 				"antialias"		"1"
 			}
 		}
-		
+
 		AchievementItemDescription	[$WIN32]
 		{
 			"1"
@@ -816,7 +816,7 @@
 			}
 		}
 
-		
+
 		"ServerBrowserTitle"
 		{
 			"1"
@@ -877,7 +877,7 @@
 				"antialias"	"1"
 			}
 		}
-	
+
 	}
 
 	//
@@ -1053,7 +1053,7 @@
 				}
 			}
 		}
-		
+
 		TitleButtonBorder
 		{
 			"backgroundtype" "0"
@@ -1108,7 +1108,7 @@
 				}
 			}
 		}
-		
+
 		ScrollBarButtonDepressedBorder
 		{
 			"inset" "0 0 0 0"
@@ -1153,12 +1153,12 @@
 		{
 			"inset" "1 1 1 1"
 
-			render 
+			render
 			{
 				"0" "fill( x0, y0, x1, y1, Black )"
 			}
 
-			render_bg 
+			render_bg
 			{
 				"0" "fill( x0, y0, x1, y1, Orange )"
 			}
@@ -1323,7 +1323,7 @@
 	CustomFontFiles
 	{
 		"1"		"resource/HALFLIFE2.ttf"
-		"2"		"resource/HL2EP2.ttf"	
+		"2"		"resource/HL2EP2.ttf"
 		"3"		"resource/marlett.ttf"
 	}
 }
