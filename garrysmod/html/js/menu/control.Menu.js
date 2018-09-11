@@ -23,13 +23,12 @@ setTimeout(function(){
 	$('#srv-prev')[0].src=window['srvdefbanner'];
 }, 3500);
 
-function UpdBanner(){
-	setTimeout(function(){
-		console.log("Updating Banner...");
-		window['srvdefbanner']="http://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion+"&"+(new Date().getTime());
-		$('#srv-prev')[0].src=window['srvdefbanner'];
-	}, 1500);
-}
+setInterval(function(){
+	console.log("Updating Banner...");
+	window['srvdefbanner']="http://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion+"&"+(new Date().getTime());
+	$('#srv-prev')[0].src=window['srvdefbanner'];
+}, 900000); // 15 min
+
 
 function ClearSoundsDecals(){
 	lua.Run( "RawConsoleCommand( 'stopsound' );" );
