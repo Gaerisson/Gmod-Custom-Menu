@@ -352,6 +352,7 @@ local data2 = {
 	Callback = function( ping, name, desc, map, players, maxplayers, botplayers, pass, lastplayed, address, gamemode, workshopid )
 		local players=players..'/'..maxplayers
 		idSrv=idSrv+1
+		print("[Debug] Added server:"..idSrv.." "..name.." - "..address.." with "..players)
 		pnlMainMenu:Call( string.format( 'AddSmartFavServer( "%i", "%s", "%s", "%s");', idSrv, name, address, players) )
 	end,
 	Finished = function()

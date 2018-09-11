@@ -11,7 +11,7 @@ var GamemodeDetails = {}
 var MapIndex = {}
 var AnnSpeed=300;
 var subscriptions = new Subscriptions();
-var menuversion="1110";
+var menuversion="1111";
 
 setTimeout(function(){
 	console.log( "#########################################################" );
@@ -31,9 +31,9 @@ setInterval(function(){
 
 
 function ClearSoundsDecals(){
-	lua.Run( "RawConsoleCommand( 'stopsound' );" );
-	lua.Run( "RawConsoleCommand( 'r_cleardecals' );" );
-	lua.Run( "RawConsoleCommand( 'echo Sounds stopped / Decals cleared !' );" );
+	lua.Run( "RunConsoleCommand( 'stopsound' );" );
+	lua.Run( "RunConsoleCommand( 'r_cleardecals' );" );
+	lua.Run( "RunConsoleCommand( 'echo Sounds stopped / Decals cleared !' );" );
 }
 
 function ServerPrev(id,sh){

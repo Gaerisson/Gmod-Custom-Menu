@@ -44,6 +44,8 @@
 	background-color: rgba(0, 0, 0, 0.47) !important;
 	float:none !important;
 	display:inline-block !important;
+	margin-right: -3px !important;
+	margin-bottom: -3px !important;
 }
 
 .middle-nav p{
@@ -134,8 +136,8 @@
 	height: 40px;
 	padding-left: 35px;
 	position: relative;
-	margin-right: -3px;
-	margin-bottom: -2px;
+	margin-right: 3px;
+	margin-top: 7px;
 	font-size: 11px;
 	text-align: left;
 	font-weight: bold;
