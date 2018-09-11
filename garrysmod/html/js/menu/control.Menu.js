@@ -24,8 +24,11 @@ setTimeout(function(){
 }, 3500);
 
 function UpdBanner(){
-	window['srvdefbanner']="http://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion;
-	$('#srv-prev')[0].src=window['srvdefbanner'];
+	setTimeout(function(){
+		console.log("Updating Banner...");
+		window['srvdefbanner']="http://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion+"&"+(new Date().getTime());
+		$('#srv-prev')[0].src=window['srvdefbanner'];
+	}, 1500);
 }
 
 function ClearSoundsDecals(){

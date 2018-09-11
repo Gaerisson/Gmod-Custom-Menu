@@ -61,7 +61,7 @@
 		<li class="smallicon" ng-click="TogglePopup('.kinect_settings')" ng-show="kinect.available"><img ng-src='img/kinect.png'><span></span></li>
 	</ul>
 
-<div class="middle-nav">
+<div onmouseover="UpdBanner()" class="middle-nav">
 <center>
 		<li id="server1" onmouseover="ServerPrev(1,1);" onmouseout="ServerPrev(1,0);" onclick="ConnectServer(1)">
 			<a href="#/">
@@ -215,7 +215,7 @@
 
 	<div id="srv-banner" class="srv-banner" style="opacity:0.8;">
 		<center>
-			<img id="srv-prev" onmouseover="UpdBanner()" src="http://gaerisson-softs.fr/logos/gmodmenu/banner.php" />
+			<img id="srv-prev" src="http://gaerisson-softs.fr/logos/gmodmenu/banner.php" />
 		</center>
 	</div>
 
