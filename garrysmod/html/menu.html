@@ -1,0 +1,225 @@
+<html>
+<head>
+
+	<title>Garry's Mod Main Menu</title>
+
+	<link rel="stylesheet" type="text/css" href="css/menu/Menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu/NavBar.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu/PageOptions.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu/NewGame.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu/Servers.css" />
+	<link rel="stylesheet" type="text/css" href="css/Workshop.css" />
+
+	<script type="text/javascript" src="js/lua.js"></script>
+
+	<script type="text/javascript" src="js/thirdparty/jquery.js"></script>
+	<script type="text/javascript" src="js/thirdparty/jquery-color.js"></script>
+	<script type="text/javascript" src="js/thirdparty/angular.js"></script>
+	<script type="text/javascript" src="js/thirdparty/angular-ui.js"></script>
+
+	<script type="text/javascript" src="js/menu/WorkshopFiles.js"></script>
+	<script type="text/javascript" src="js/menu/Subscriptions.js"></script>
+	<script type="text/javascript" src="js/menu/menuApp.js?2"></script>
+	<script type="text/javascript" src="js/menu/control.Menu.js?2"></script>
+	<script type="text/javascript" src="js/menu/control.Main.js?2"></script>
+	<script type="text/javascript" src="js/menu/control.NewGame.js"></script>
+	<script type="text/javascript" src="js/menu/control.Servers.js"></script>
+	<script type="text/javascript" src="js/menu/control.Addons.js"></script>
+	<script type="text/javascript" src="js/menu/control.Demos.js"></script>
+	<script type="text/javascript" src="js/menu/control.Saves.js"></script>
+
+	<script type="text/javascript" src="js/svc.Tranny.js"></script>
+
+	<script type="text/javascript" src="js/menu/TestData.js"></script>
+	<script type="text/javascript" src="js/menu/TestServers.js"></script>
+	<script type="text/javascript" src="js/menu/TestWorkshop.js"></script>
+
+</head>
+
+<body ng-app="MenuApp" ng-controller="MenuController">
+
+<div id="version" ng-click="ShowNews()" ng-show="Branch"><span ng-show="Branch != 'unknown'">You are on the {{Branch}} branch. ( </span>{{Version}}<span ng-show="Branch != 'unknown'"> )</span></div>
+
+<div ng-view>
+
+</div>
+
+<div id="NavBar">
+
+	<div class="left backtomenu" ng-show="ShowBack">
+		<a href="#/" class="button ui_sound_return"><img src='img/back_to_main_menu.png'><span ng-Tranny="'back_to_main_menu'" ></span></a>
+	</div>
+
+	<div class="left" ng-show="InGame">
+		<a href="#/" class="button ui_sound_return" ng-click="BackToGame()"><img src='img/back_to_game.png'><span ng-Tranny="'back_to_game'" ></span></a>
+	</div>
+
+	<ul class="right">
+		<li class="bigicon" style="background-color: rgba(255, 255, 255, 0.62);" ng-click="ToggleGamemodes()"><img ng-src='../gamemodes/{{Gamemode}}/icon24.png'><span>{{GamemodeTitle}}</span></li>
+		<li class="smallicon" ng-click="ToggleLanguage()"><img style="border-radius: 4px;margin-top: 9px;" ng-src='../resource/localization/{{Language}}.png'><span></span></li>
+		<li class="smallicon" ng-click="ToggleGames()"><img style="" ng-src='img/games.png'><span></span></li>
+		<li class="smallicon" ng-click="TogglePopup('.kinect_settings')" ng-show="kinect.available"><img ng-src='img/kinect.png'><span></span></li>
+	</ul>
+
+<div class="middle-nav">
+
+		<li onmouseover="ServerPrev(1,1);" onmouseout="ServerPrev(1,0);" onclick="ConnectServer(1)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+						<span class="srv-name" id="srv1-name"></span><p></p><span class="srv-addr" id="srv1-addr"></span><p></p><span class="srv-play" id="srv1-play"></span>
+				</div>
+			</a>
+		</li>
+
+		<li onmouseover="ServerPrev(2,1);" onmouseout="ServerPrev(2,0);" onclick="ConnectServer(2)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+						<span class="srv-name" id="srv2-name"></span><p></p><span class="srv-addr" id="srv2-addr"></span><p></p><span class="srv-play" id="srv2-play"></span>
+				</div>
+			</a>
+		</li>
+
+		<li onmouseover="ServerPrev(3,1);" onmouseout="ServerPrev(3,0);" onclick="ConnectServer(3)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+						<span class="srv-name" id="srv3-name"></span><p></p><span class="srv-addr" id="srv3-addr"></span><p></p><span class="srv-play" id="srv3-play"></span>
+				</div>
+			</a>
+		</li>
+
+		<li onmouseover="ServerPrev(4,1);" onmouseout="ServerPrev(4,0);" onclick="ConnectServer(4)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+						<span class="srv-name" id="srv4-name"></span><p></p><span class="srv-addr" id="srv4-addr"></span><p></p><span class="srv-play" id="srv4-play"></span>
+				</div>
+			</a>
+		</li>
+
+		<li onmouseover="ServerPrev(5,1);" onmouseout="ServerPrev(5,0);" nclick="ConnectServer(5)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+						<span class="srv-name" id="srv5-name"></span><p></p><span class="srv-addr" id="srv5-addr"></span><p></p><span class="srv-play" id="srv5-play"></span>
+				</div>
+			</a>
+		</li>
+
+		<li onmouseover="ServerPrev(6,1);" onmouseout="ServerPrev(6,0);" onclick="ConnectServer(6)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+						<span class="srv-name" id="srv6-name"></span><p></p><span class="srv-addr" id="srv6-addr"></span><p></p><span class="srv-play" id="srv6-play"></span>
+				</div>
+			</a>
+		</li>
+
+		<li onmouseover="ServerPrev(7,1);" onmouseout="ServerPrev(7,0);" onclick="ConnectServer(7)">
+			<a href="#/">
+				<img id="srv-icon" src='img/main/menu/server.png'>
+				<div class="srv-inf">
+					<span class="srv-name" id="srv7-name"></span><p></p><span class="srv-addr" id="srv7-addr"></span><p></p><span class="srv-play" id="srv7-play"></span>
+				</div>
+			</a>
+		</li>
+</div>
+
+	<ul class="center" njg-show="InGame">
+
+		<li class="bigicon" style="margin: 7px 0px 0px 10px;padding: 0px 20px 0px 20px;" ng-click="ClearSoundsDecals()">
+			<a href="#/"><img src='img/main/menu/clean.png'></a>
+		</li>
+
+		<li class="bigicon" nfg-show="ShowFavButton" ng-click="AddServerToFavorites()">
+			<a href="#/"><img id="fav-icon" src='img/favourite_server.png'><span ng-Tranny="'favorite_this_server'"></span></a>
+		</li>
+
+
+
+		<!-- <li ng-click="Disconnect()"><a href="#/"><img src='img/disconnect.png'><span ng-Tranny="'disconnect'"></span></a></li> -->
+
+	</ul>
+
+</div>
+
+<ul class="gamemode_list popup gamemode-sm">
+	<li ng-repeat="gm in Gamemodes|filter:{menusystem:true}|orderBy:'name'" ng-click="SelectGamemode( gm )">
+		<img ng-src='../gamemodes/{{gm.name}}/icon24.png'><span>{{gm.title}}</span>
+	</li>
+
+</ul>
+
+<ul class="language_list popup language-sm">
+	<li  ng-repeat="lang in Languages" ng-click="SelectLanguage( lang )">
+		<img ng-src='../resource/localization/{{lang}}.png'>
+	</li>
+</ul>
+
+<ul class="games_list popup">
+
+	<li ng-repeat="game in Games|orderBy:'title'" class="{{IfElse( !game.owned, 'notowned', '' )}} {{IfElse( !game.installed, 'notinstalled', '' )}}">
+
+		<input type=checkbox ng-model="game.mounted" ng-show="game.installed" ng-change="GameMountChanged( game )"/>
+		<img src='img/notowned.png' ng-show="!game.owned" width=16 height=16>
+		<img src='img/notinstalled.png' ng-show="game.owned && !game.installed" width=16 height=16>
+
+		<span>{{game.title}}</span>
+
+	</li>
+
+</ul>
+
+<ul class="kinect_settings popup">
+
+	<li>
+		<div>
+
+			<p>
+				<label style="display: block">
+					<input type="checkbox" ng-model="kinect.show_color" ng-change="kinect.update()">  <span ng-Tranny="'motionsensor.showcolor'"></span>
+				</label>
+			</p>
+
+
+			<div ng-show="kinect.show_color">
+
+				<span ng-Tranny="'motionsensor.colorpos'"></span>
+
+				<p style="margin-left: 5px;">
+					<label ng-repeat="option in kinect.color_options" style="display: block">
+						<input type="radio" name="kinect.color" ng-model="kinect.color" value="{{option}}" ng-change="kinect.update()">
+						<span ng-Tranny="'motionsensor.showcolor.'+ option"></span>
+					</label>
+				</p>
+			</div>
+
+			<div  ng-show="kinect.show_color">
+				<span ng-Tranny="'motionsensor.colorsize'"></span>
+
+				<p style="margin-left: 5px;">
+					<label ng-repeat="option in kinect.size_options" style="display: block">
+						<input type="radio" name="kinect.color_size" ng-model="kinect.color_size" value="{{option}}" ng-change="kinect.update()">
+						<span ng-Tranny="'motionsensor.colorsize.'+ option"></span>
+					</label>
+				</p>
+			</div>
+
+		</div>
+
+	</li>
+
+</ul>
+
+
+	<div id="srv-banner" class="srv-banner" style="opacity:0;">
+		<center>
+			<img id="srv-prev" src="http://vps.gaerisson-softs.fr/ServerSignature/137.74.192.37:27035.png" />
+		</center>
+	</div>
+
+
+</body>
+</html>

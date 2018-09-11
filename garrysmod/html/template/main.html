@@ -1,0 +1,87 @@
+
+	<div class="page" ng-controller="ControllerMain">
+
+		<div class="options">
+
+			<ul>
+
+				<li><img class="animgm" ng-src='../gamemodes/{{Gamemode}}/logo.png' /></li>
+
+				<li>&nbsp;</li>
+
+				<li ng-show="InGame">
+					<div class="btn-menu">
+						<img src="img/main/menu/back.png" />
+						<a ng-click="BackToGame()" ng-Tranny="'resume_game'"></a>
+					</div>
+				</li>
+
+				<li ng-show="InGame"></li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/computer-screen.png" />
+						<a ng-href="#/newgame/" ng-Tranny="'new_game'"></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/server.png" />
+						<a ng-href="#/servers/" ng-Tranny="'find_mp_game'"></a>
+					</div>
+				</li>
+
+				<li>&nbsp;</li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/plugin.png" />
+						<a ng-href="#/addons/" ng-Tranny="'addons'"></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/video.png" />
+						<a ng-href="#/demos/" ng-Tranny="'demos'"></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/save.png" />
+						<a ng-href="#/saves/" ng-Tranny="'saves'"></a>
+					</div>
+				</li>
+
+				<li>&nbsp;</li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/settings.png" />
+						<a ng-click="MenuOption( this, 'OpenOptionsDialog')" ng-Tranny="'options'"></a>
+					</div>
+				</li>
+
+				<li>&nbsp;</li>
+
+				<li ng-show="InGame">
+					<div class="btn-menu">
+						<img src="img/main/menu/left-arrow.png" />
+						<a ng-click="MenuOption( this, 'engine disconnect');" ng-Tranny="'disconnect'"></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="btn-menu">
+						<img src="img/main/menu/close.png" />
+						<a ng-click="MenuOption( this, 'Quit')" ng-Tranny="'quit'"></a>
+					</div>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>

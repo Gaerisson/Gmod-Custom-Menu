@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<title>Loading..</title>
+		<link rel="stylesheet" type="text/css" href="loading.css?3" />
+		<script type="text/javascript" src="js/thirdparty/jquery.js"></script>
+
+	</head>
+	<body>
+
+		<div id="container">
+
+			<img src='img/gmod_logo_brave.png' class="bounce"/>
+
+			<center>
+				<br />
+				<div id="walk" class="walk">:O</div>
+				<br />
+				<br />
+				<br />
+				<div class="steam_info" id="st_info"></div>
+				<div class="server_info" id="s_info"></div>
+				<br />
+				<a id="status"></a>
+				<div class="progressbar">
+					<div class="inner">
+						<a id="progress_text">0%</a>
+					</div>
+				</div>
+				<div style="width: 40rem;position: relative;right: 50%;">
+					<a style="font-size: 12px;" id="downloadstatus"></a>
+				</div>
+			</center>
+
+		</div>
+
+
+		<script type="text/javascript">
+
+		var isDevelopmentMode = false;
+
+		if (isDevelopmentMode) {
+				var total = 150;
+				SetFilesTotal(total);
+
+				DownloadingFile("Wiremod via Workshop");
+				DownloadingFile("Downloading materials/mycommunity/image.jpeg");
+				DownloadingFile("Downloading materials/mycommunity/second_image.jpeg");
+				DownloadingFile("Downloading materials/mycommunity/gm_construct.bsp");
+				DownloadingFile("Downloading materials/mycommunity/texture_file.vmt");
+				DownloadingFile("Downloading materials/mycommunity/some_texture.vmt");
+				DownloadingFile("Downloading materials/mycommunity/background_image.png");
+				DownloadingFile("Downloading materials/mycommunity/crazy_hud.png");
+				DownloadingFile("Downloading materials/mycommunity/hatsune_miku.mdl");
+				DownloadingFile("Downloading materials/mycommunity/pink_terrorist.mdl");
+				DownloadingFile("Downloading materials/mycommunity/mysong.mp3");
+				DownloadingFile("Downloading materials/mycommunity/yelling.mp3");
+				DownloadingFile("Downloading materials/mycommunity/my_particles.pcf");
+				DownloadingFile("Downloading materials/mycommunity/second_particles.pcf");
+				DownloadingFile("Downloading materials/mycommunity/bebasnueue.ttf");
+				DownloadingFile("Downloading materials/mycommunity/overusedfont.ttf");
+
+
+				SetStatusChanged("Receiving client info...");
+				SetFilesNeeded(25);
+
+				setTimeout(function(){
+					var p=0;
+					setInterval(function(){
+						if(p<=total){
+								DownloadingFile("Downloading materials/mycommunity/background_image_" + p + ".png");
+								SetFilesNeeded(p);
+								p++;
+						}else{
+							setTimeout(function(){
+								SetStatusChanged("Sending client info...");
+							}, 1500);
+						}
+					}, 150+p*15);
+				}, 1500);
+
+
+				GameDetails( "[FR] ServTest String", "www.gaerisson-softs.com", "gm_flatgrass", 20, "STEAM_0:1:39810154", "sandbox" );
+			}
+
+			function SetFilesTotal( total )
+			{
+				window.filestotal=total;
+			}
+
+			function DownloadingFile( fileName )
+			{
+				if (fileName.indexOf("via Workshop") > -1){
+					$("#downloadstatus")[0].innerHTML = fileName+" ...";
+					window.progressbar=15;
+				}else{
+					$("#downloadstatus")[0].innerHTML = "("+window.filesneeded+"/"+window.filestotal+") Downloading '"+fileName+"' ...";
+				}
+			}
+
+			function SetStatusChanged( status )
+			{
+				if(status.indexOf("Sending client info") > -1){
+					$("#status")[0].classList.add("rainbow");
+					$("#walk")[0].innerHTML=":D"
+					$("#walk")[0].setAttribute("style","-webkit-animation-name: walk-crazy;-webkit-animation-duration: 2.0s;");
+				}
+				$("#status")[0].innerHTML = status;
+			}
+
+			function SetFilesNeeded( needed )
+			{
+				window.filesneeded=needed;
+				window.progressbar=( window.filesneeded / window.filestotal ) * 100;
+				$(".progressbar .inner")[0].style.width=window.progressbar+"%";
+				$("#progress_text")[0].innerHTML = (window.progressbar).toFixed(0)+"%";
+				if(window.progressbar<20){
+					$("#walk")[0].innerHTML=":<"
+				}else if(window.progressbar<50){
+					$("#walk")[0].innerHTML=":|"
+				}else if(window.progressbar<70){
+					$("#walk")[0].innerHTML=":)"
+				}else if(window.progressbar<90){
+					$("#walk")[0].innerHTML=":>"
+				}
+			}
+
+			function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
+			{
+				$("#s_info").append('<img src="img/loading/server.png"></img> ' + servername + '<br>');
+				$("#s_info").append('<img src="img/loading/placeholder.png"></img> ' + mapname + '<br>');
+				$("#s_info").append('<img src="../gamemodes/'+gamemode+'/icon24.png"></img> ' + gamemode + '<br>');
+				$("#st_info").append('<img src="http://vps.gaerisson-softs.fr/API/Steam/'+steamid+'.jpg"></img> <br><a>' + steamid + '</a><br>');
+			}
+			//https://wiki.garrysmod.com/page/Loading_URL
+		</script>
+
+	</body>
+</html>

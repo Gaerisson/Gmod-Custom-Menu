@@ -1,0 +1,275 @@
+workshopicon
+{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	margin: 10px 13px 10px 13px;
+	position: relative;
+	overflow: hidden;
+	background-color: #666;
+	background-position: center;
+	border: 3px solid white;
+	border-width: 4px 0px 3px 0px;
+	border-color: #00b3ff white white white;
+}
+
+workshopicon preview
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+workshopicon controls
+{
+	z-index: 10;
+	bottom: -32px;
+	-webkit-transition: bottom 100ms ease-in 0ms;
+}
+
+workshopicon:hover controls
+{
+	opacity: 1;
+	bottom: 0px;
+	-webkit-transition: bottom 100ms ease-in 200ms;
+}
+
+workshopicon name
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	text-align: left;
+	background-color: rgba( 255, 255, 255, 0.99 );
+	font-size: 14px;
+	padding: 2px 5px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	z-index: 10;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: "Arial";
+	color: #666;
+}
+
+workshopicon author, workshopicon votes
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	text-align: right;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 10;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: "Arial";
+	color: #333;
+	background-color: rgba( 255, 255, 255, 1 );
+	border-radius: 4px 0 0 0;
+	padding: 3px 6px;
+
+}
+
+workshopicon author
+{
+	right: 0px;
+	-webkit-transition: right 100ms ease-out 200ms;
+}
+
+workshopicon:hover author
+{
+	right: -200px;
+	-webkit-transition: right 100ms ease-in 0ms;
+}
+
+workshopicon votes
+{
+	left: 0px;
+	-webkit-transition: left 100ms ease-out 200ms;
+}
+
+workshopicon:hover votes
+{
+	left: -200px;
+	-webkit-transition: left 100ms ease-in 0ms;
+}
+
+workshopicon votes
+{
+	bottom: 0px;
+	right: inherit;
+	border-radius: 0 4px 0 0;
+}
+
+workshopicon description
+{
+	position: absolute;
+	left: 0;
+	top: 0px;
+	bottom: 0px;
+	right: 0;
+	text-align: justify;
+	background-color: rgba(0, 112, 255, 0.48);
+	font-size: 11px;
+	padding: 32px 8px;
+	color: #fff;
+	cursor: default;
+
+	opacity: 0;
+	-webkit-transition: opacity 100ms ease-in 0ms;
+}
+
+workshopicon .checkbox
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	margin: 3px 3px;
+	z-index: 32;
+}
+
+workshopicon:hover description
+{
+	display: inherit;
+
+	opacity: 1;
+	-webkit-transition: opacity 50ms ease-in 0ms;
+}
+
+workshopmessage
+{
+	font-size: 48px;
+	font-weight: bolder;
+	color: #999;
+	text-align: center;
+	display: block;
+	margin: 64px;
+}
+
+workshopcontainer
+{
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	bottom: 0px;
+	right: 0px;
+	background-color: rgba(250, 250, 250, 0.52);
+	padding: 12px;
+	border: solid 1px white;
+	border-width: 4px 0px 0px 0px;
+	margin: 20px;
+	border-color: #2c87e0;
+}
+
+controls
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 3px;
+	margin: 6px 5px;
+	overflow: display;
+}
+
+controls control
+{
+	font-size: 11px;
+	display: inline-block;
+	background-color: #FFF;
+	padding: 2px 4px;
+	cursor: pointer;
+	height: 15px;
+	position: relative;
+	border: solid 1px white;
+	border-width: 0px 0px 2px 0px;
+	border-color: #bcbcbc;
+}
+
+controls control IMG
+{
+	padding-top: 3px;
+}
+
+controls control:hover
+{
+	background-color: #76aadd;
+	border: solid 1px white;
+	border-width: 0px 0px 2px 0px;
+	border-color: #2c87e0;
+}
+
+pagnation
+{
+	/* background-color: #fff; */
+	border-radius: 4px;
+	margin: 0 auto;
+	padding: 4px 4px;
+	white-space: nowrap;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+pagnation .back, pagnation .next
+{
+	display: block;
+	float: left;
+	background: transparent url('../img/arrow_left.png') no-repeat;
+	background-color: #2387ed;
+	/* border-radius: 3px; */
+	background-position: center center;
+}
+
+pagnation .next
+{
+	float: right;
+	background-image: url('../img/arrow_right.png');
+}
+
+workshopicon.installed
+{
+	border-color: #7bd7fc;
+}
+
+workshopicon.installed name
+{
+	background-color: #7bd7fc;
+}
+
+workshopicon.installed author
+{
+	background-color: #7bd7fc;
+}
+
+workshopicon.installed votes
+{
+	background-color: #7bd7fc;
+}
+
+workshopicon.disabled
+{
+	border-color: #f5a9a8;
+}
+
+workshopicon.disabled name
+{
+	background-color: #f5a9a8;
+}
+
+workshopicon.disabled author
+{
+	background-color: #f5a9a8;
+}
+
+workshopicon.disabled votes
+{
+	background-color: #f5a9a8;
+}

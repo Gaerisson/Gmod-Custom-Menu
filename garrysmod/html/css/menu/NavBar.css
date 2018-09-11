@@ -1,0 +1,490 @@
+.srv-banner{
+	position: absolute;
+	bottom: 47px;
+	left: 10%;
+	right: 10%;
+	z-index: -1;
+}
+
+.srv-name{
+	font-size: 9px !important;
+}
+
+.srv-addr{
+	font-size: 9px !important;
+}
+
+.srv-play{
+	font-size: 9px !important;
+}
+
+.middle-nav{
+	bottom: 0px;
+	right: 30%;
+	left: 30%;
+	position: absolute;
+	display: inline-flex;
+}
+
+.middle-nav li:hover{
+	background-color: rgba(19, 73, 165, 0.5) !important;
+	border-width: 0px 0px 4px 0px !important;
+	margin-top: 4px !important;
+	border-color: #007dff !important;
+	-webkit-transition: margin-top 0.50s, border 0.50s, background-color 0.50s;
+}
+
+.middle-nav .srv-inf{
+	bottom: 6px;
+	position: relative;
+	right: 12px;
+}
+
+.middle-nav li{
+	max-width: 150px;
+	background-color: rgba(0, 0, 0, 0.47) !important;
+}
+
+.middle-nav p{
+	margin: 0px;
+}
+
+.middle-nav li a span{
+	color:white !important;
+}
+
+#NavBar
+{
+	position: absolute;
+	bottom: 0px;
+	height: 50px;
+	left: 0;
+	right: 0;
+	/* background-color: rgba(255, 255, 255, 0.13); */
+	/* box-shadow: 0px -1px 3px black; */
+}
+
+#NavBar UL
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#NavBar .left
+{
+	text-align: left;
+	margin-left: 10px;
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#NavBar .right
+{
+	float: right;
+	text-align: right;
+	margin-right: 6px;
+	width: 350px;
+	right: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#NavBar .smallicon
+{
+	width: 40px;
+	padding: 0;
+	text-align: center;
+}
+
+#NavBar .smallicon img
+{
+	margin-top: 7px;
+	margin-left: 7px;
+}
+
+#NavBar .bigicon img
+{
+	margin-top: -1px;
+	margin-left: -1px;
+}
+
+#NavBar UL.center
+{
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+
+#NavBar .right li:hover, #NavBar .center li:hover
+{
+	background-color: rgba(250, 250, 250, 0.52);
+	height: 40px;
+	transition: height 0.50s, background-color 0.50s;
+}
+
+#NavBar LI, #NavBar .button
+{
+	display: inline-block;
+	background-color: rgba(250, 250, 250, 0.22);
+	height: 43px;
+	padding-left: 35px;
+	position: relative;
+	margin-right: 2px;
+	margin-top: 7px;
+	font-size: 11px;
+	text-align: left;
+	font-weight: bold;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: margin-top 0.50s,border-width 0.50s, background-color 0.50s;
+	border: solid 1px white;
+	border-width: 0px 0px 2px 0px;
+	border-color: #fff;
+}
+
+UL.popup LI
+{
+	display: inline-block;
+	background-color: rgba(250, 250, 250, 0.22);
+	padding-left: 35px;
+	position: relative;
+	margin-right: 2px;
+	margin-top: 5px;
+	font-size: 11px;
+	text-align: left;
+	font-weight: bold;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-width: 0px 0px 0px 2px;
+	border-style: solid;
+	border-color: #4485ff;
+	transition: border 0.30s, background-color 0.50s, margin-right 0.50s;
+}
+
+UL.popup LI:hover
+{
+	background-color: rgba(250, 250, 250, 0.50);
+	border-width: 0px 0px 0px 4px;
+	border-color: #4485ff;
+	transition: border 0.30s, background-color 0.50s;
+}
+
+UL.popup LI:hover span
+{
+	margin-right: 2px;
+	transition: margin-right 0.50s;
+}
+
+#NavBar .button
+{
+	display: block;
+	padding: 4px 5px 0px 5px;
+	height: 36px;
+	margin-left: 5px;
+	vertical-align: top;
+}
+
+div.backtomenu a img
+{
+	padding-left: 7px;
+	transition: padding-left 0.5s;
+	-webkit-transition: padding-left 0.5s;
+}
+
+div.backtomenu a:hover img
+{
+	padding-left: 0px;
+	transition: padding-left 0.5s;
+	-webkit-transition: padding-left 0.5s;
+}
+
+div.backtomenu a span
+{
+	transition: padding-left 0.5s;
+	-webkit-transition: padding-left 0.5s;
+}
+
+div.backtomenu a:hover span
+{
+	padding-left: 17px !important;
+	transition: padding-left 0.5s;
+	-webkit-transition: padding-left 0.5s;
+}
+
+#NavBar .button:hover
+{
+	background-color: rgba(250, 250, 250, 0.52);
+	border-width: 0px 0px 4px 0px;
+	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+}
+
+#NavBar .button span
+{
+	position: relative;
+	top: -12px;
+	padding: 0px 10px;
+	/* color: #333; */
+	color: #000;
+}
+
+#NavBar LI
+{
+	display: block;
+	float: right;
+}
+
+#NavBar LI SPAN, UL.gamemode_list LI SPAN, UL.language_list LI SPAN
+{
+	color: #000;
+	position: relative;
+	top: 13px;
+	padding-left: 8px;
+	padding-right: 16px;
+}
+
+#NavBar LI IMG, UL.gamemode_list LI IMG, UL.language_list LI IMG
+{
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+
+.fav-added
+{
+	-webkit-animation-name: fav-anim;
+  -webkit-animation-duration: 3s;
+}
+
+@-webkit-keyframes fav-anim {
+	0%   {-webkit-filter: brightness(100%);}
+	50%  {-webkit-filter: brightness(125%);}
+	100% {-webkit-filter: brightness(100%);}
+}
+
+UL.games_list
+{
+	right: 150px;
+	width: 230px;
+	overflow: auto;
+	max-height: 400px;
+}
+
+UL.games_list LI
+{
+	padding: 0;
+	height: 20px;
+	line-height: inherit;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	position: relative;
+	background-color: rgba(40, 159, 216, 0.68);
+}
+
+UL.games_list LI:last-child
+{
+	margin-bottom: 0px;
+}
+
+UL.games_list LI span
+{
+	position: absolute;
+	left: 25px;
+	right: 22px;
+	top: 3px;
+}
+
+UL.games_list LI IMG
+{
+	position: absolute;
+	left: 2px;
+	top: 2px;
+}
+
+UL.games_list LI.notinstalled
+{
+	opacity: 0.7;
+	cursor: default;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+UL.games_list LI.notowned
+{
+	opacity: 0.7;
+	cursor: default;
+}
+
+UL.gamemode_list
+{
+	overflow: auto;
+	max-height: 80%;
+	border: 3px solid rgba(51, 51, 51, 0.6)
+}
+
+UL.gamemode-sm li
+{
+	height: 25px;
+	padding-left: 20px;
+	-webkit-transition: height 0.5s;
+}
+
+UL.gamemode-sm li:hover
+{
+	height: 40px;
+	padding-left: 35px;
+	-webkit-transition: height 0.5s;
+}
+
+UL.gamemode-sm li:hover img
+{
+	width: 30px;
+	-webkit-transition: width 0.5s;
+}
+
+UL.gamemode-sm li img
+{
+	width: 18px;
+	-webkit-transition: width 0.5s;
+}
+
+UL.gamemode-sm li:hover span
+{
+	top: 13px;
+	left: 40px;
+	-webkit-transition: top 0.5s, left 0.5s;
+}
+
+UL.gamemode-sm li span
+{
+	top: 9px;
+	-webkit-transition: top 0.5s, left 0.5s;
+	left: 20px;
+	position: absolute;
+}
+
+UL.gamemode_list LI
+{
+	display: inherit;
+	margin: 3px;
+	border-radius: 0;
+	background-color: rgba(255, 255, 255, 0.42);
+	margin: 0 2px 2px 0;
+}
+
+UL.gamemode_list LI:hover
+{
+	background-color: #fff;
+}
+
+UL.gamemode_list LI:first-child
+{
+	/* border-radius: 5px 5px 0 0; */
+}
+
+UL.gamemode_list LI:last-child
+{
+	margin-bottom: 0;
+	/* border-radius: 0 0 5px 5px; */
+}
+
+UL.language_list
+{
+	right: 100px;
+	text-align: center;
+}
+
+UL.language_list LI
+{
+	display: inline-block;
+	width: 26px;
+	height: 24px;
+	padding: 0;
+	background-color: transparent;
+}
+
+UL.language_list LI IMG
+{
+	border: 1px solid #888;
+}
+
+UL.language_list LI:hover
+{
+	background-color: rgba(255, 255, 255, 0.7)
+}
+
+UL.language-sm li img
+{
+	-webkit-filter: grayscale(50%);
+	background-color: transparent;
+	width: 18px;
+	left: 3px;
+}
+
+UL.language-sm li:hover img
+{
+	-webkit-filter: grayscale(0%);
+	background-color: transparent;
+	/* border-radius: 5px; */
+	/* -webkit-transition: border-radius 0.5s; */
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	height: 8px;
+	background-color: rgb( 250, 250, 250 );
+	border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgb( 180, 180, 180);
+	border-radius: 2px;
+}
+
+.popup
+{
+	position: absolute;
+	bottom: 50px;
+	right: 5px;
+	width: 230px;
+	z-index: 1000;
+	list-style: none;
+	cursor: pointer;
+	display: none;
+	padding: 2px 2px 4px 2px;
+	margin: 0px;
+	background-color: rgba(255, 255, 255, 0.15);
+	text-align: center;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	border-width: 1px 1px 4px 1px;
+}
+
+.kinect_settings
+{
+	right: 150px;
+	width: 230px;
+	overflow: auto;
+	max-height: 300px;
+	padding: 0;
+	border: 3px solid #333;
+}
+
+.kinect_settings LI
+{
+	display: block !important;
+	margin: 0 !important;
+	height: auto !important;
+	padding: 2px 16px !important;
+}

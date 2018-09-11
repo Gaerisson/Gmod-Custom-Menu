@@ -1,0 +1,76 @@
+<html>
+<head>
+
+	<title>Creations</title>
+
+	<link rel="stylesheet" type="text/css" href="css/Workshop.css" />
+	<link rel="stylesheet" type="text/css" href="css/creations/Creations.css" />
+
+	<script type="text/javascript" src="js/lua.js"></script>
+
+	<script type="text/javascript" src="js/thirdparty/jquery.js"></script>
+	<script type="text/javascript" src="js/thirdparty/jquery-color.js"></script>
+	<script type="text/javascript" src="js/thirdparty/angular.js"></script>
+	<script type="text/javascript" src="js/thirdparty/fontawesome.all.js"></script>
+
+	<script type="text/javascript" src="js/menu/gbrowser.js"></script>
+
+	<script type="text/javascript" src="js/svc.Tranny.js"></script>
+
+	<script type="text/javascript" src="js/creations/saves.js"></script>
+	<script type="text/javascript" src="js/creations/common.js"></script>
+
+</head>
+
+<body ng-app="CSavesApp" ng-controller="CSaves">
+
+	<div class="gbmain">
+
+		<div class="options">
+
+			<!-- GBROWSER -->
+
+			<ul class="gbrowser">
+
+				<li class="headline" ng-tranny="'GBrowser'"></li>
+				<li class="subtitle"></li>
+
+				<li>&nbsp;</li>
+
+				<li id="favlst" ng-tranny="'Favorites'"></li>
+
+				<li>&nbsp;</li>
+				<li>&nbsp;</li>
+
+				<li id="histtext" ng-tranny="'History'"></li>
+
+				<li>&nbsp;</li>
+
+				<li><rfbutton type="button" value="Saves Menu" onClick="document.location = 'saves_menu.html'">Goto "Saves" Menu</rfbutton></li>
+				<!-- <li><rfbutton type="button" value="Reload Page" onClick="document.location.reload(true)">Refresh</rfbutton></li> -->
+
+			</ul>
+
+		</div>
+
+		<div class="gbrowser-window">
+			<div class="gbrowser-topbar">
+				<button onclick="gbrowser('prev')"><i class="fas fa-arrow-left"></i></button>
+				<button onclick="gbrowser('next')"><i class="fas fa-arrow-right"></i></button>
+				<button onclick="gbrowser('set','homepage')"><i class="fas fa-home"></i></button>
+				<input id="gbrowser-inp" type="text" autocomplete autofocus list="url-list" required value="http://"></input>
+				<button id="gbrowser-search" onclick="gbrowser('set','inpurl')">Go</button>
+
+			</div>
+			<!-- <div class="gbrowser-iframe-box"> -->
+				<iframe class="gbrowser-iframe-box" title="GBrowser Iframe"></iframe>
+			<!-- </div> -->
+			<div class="gbrowser-bottombar">
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

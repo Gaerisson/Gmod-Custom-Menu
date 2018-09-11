@@ -1,0 +1,198 @@
+BODY
+{
+	background: #fff url( 'img/bg.jpg' );
+	-webkit-background-size: 100% 100%;
+	overflow: hidden;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.server_info
+{
+	background-color: rgba(0, 0, 0, 0.25);
+  border: solid #efefef;
+  border-radius: 10px;
+  border-width: 3px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+	text-align: left;
+  padding: 6px;
+}
+
+.server_info img
+{
+	width:25px;
+	top: 6px;
+  position: relative;
+}
+
+.steam_info
+{
+	background-color: rgba(0, 0, 0, 0.25);
+  border: solid #efefef;
+  border-radius: 10px;
+  border-width: 3px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+	/* text-align: left; */
+  padding: 6px;
+}
+
+.steam_info img
+{
+	border-radius: 10px;
+	width:100px;
+	top: 6px;
+  position: relative;
+	display: block;
+}
+
+.rainbow
+{
+	-webkit-animation-name: anim-text-color;
+ 	-webkit-animation-duration: 50s;
+ 	-webkit-animation-iteration-count: infinite;
+ 	-webkit-animation-direction: alternate;
+ 	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes anim-text-color {
+  0% { color: #5cd662; }
+  5% { color: #5e5cd6; }
+  10% { color: #d67c5c; }
+  15% { color: #5ca5d6; }
+  20% { color: #a7d65c; }
+  25% { color: #a7d65c; }
+  30% { color: #5cd66e; }
+  35% { color: #5c60d6; }
+  40% { color: #be5cd6; }
+  45% { color: #d6815c; }
+  50% { color: #d65c8d; }
+  55% { color: #5cd69f; }
+  60% { color: #5cd695; }
+  65% { color: #5cd672; }
+  70% { color: #d65cbe; }
+  75% { color: #5cd66a; }
+  80% { color: #c6d65c; }
+  85% { color: #d65c70; }
+  90% { color: #5ed65c; }
+  95% { color: #d6935c; }
+  100% { color: #8dd65c; }
+}
+
+#container
+{
+	position: fixed;
+	text-align: center;
+	left: 50%;
+	top: 45%;
+	margin-top: -120px;
+	margin-left: -150px;
+	width: 300px;
+}
+
+.progressbar
+{
+	margin: 0 auto;
+	width: auto;
+	border-radius: 3px;
+	text-align: center;
+	padding: 1px;
+	background-color: rgba(110, 110, 110, 0.6);
+}
+
+.reflection
+{
+	-webkit-box-reflect: below -1px -webkit-gradient(linear, left top, left bottom, from(transparent), from(rgba(0, 0, 0, 0.0)), to(rgba(255, 255, 255, 0.5)));
+}
+
+.progressbar .inner
+{
+	border-radius: 2px;
+	background-color: rgba(0, 255, 0, 0.62);
+	width: 0.2%;
+	height: 11px;
+}
+
+#progress_text
+{
+	width: 500px;
+	bottom: 0px;
+	margin: 0 auto;
+	text-align: right;
+	font-size: 11px;
+	font-family: helvetica;
+	color: rgba(95, 95, 95, 0.68);
+	letter-spacing: -1px;
+	text-shadow: 0px 0px 2px #a1a1a1;
+	overflow: hidden;
+	white-space: nowrap;
+	float: right;
+	margin-right: 5px;
+}
+
+@-webkit-keyframes walk
+{
+	0% { -webkit-transform: rotateZ(0deg); }
+	50% { -webkit-transform: rotateZ(180deg); }
+	100% { -webkit-transform: rotateZ(360deg); }
+}
+
+@-webkit-keyframes walk-crazy {
+  0% { background-color: #5cd662; }
+  5% { background-color: #5e5cd6; }
+  10% { background-color: #d67c5c; }
+  15% { background-color: #5ca5d6; }
+  20% { background-color: #a7d65c; }
+  25% { background-color: #a7d65c; }
+  30% { background-color: #5cd66e; }
+  35% { background-color: #5c60d6; }
+  40% { background-color: #be5cd6; }
+  45% { background-color: #d6815c; }
+  50% { background-color: #d65c8d; }
+  55% { background-color: #5cd69f; }
+  60% { background-color: #5cd695; }
+  65% { background-color: #5cd672; }
+  70% { background-color: #d65cbe; }
+  75% { background-color: #5cd66a; }
+  80% { background-color: #c6d65c; }
+  85% { background-color: #d65c70; }
+  90% { background-color: #5ed65c; }
+  95% { background-color: #d6935c; }
+  100% { background-color: #8dd65c; }
+
+	0% { -webkit-transform: rotateZ(0deg); }
+  10% { -webkit-transform: translate(-10px, -20px); }
+  20% { -webkit-transform: translate(-30px, 00px); }
+  30% { -webkit-transform: translate(00px, 20px); }
+  40% { -webkit-transform: translate(10px, -10px); }
+  50% { -webkit-transform: rotateZ(180deg); }
+  60% { -webkit-transform: translate(-30px, 10px); }
+  70% { -webkit-transform: translate(20px, 10px); }
+  80% { -webkit-transform: translate(-10px, -10px); }
+  90% { -webkit-transform: translate(20px, 20px); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.walk
+{
+	-webkit-animation-name: walk;
+	-webkit-animation-duration: 15.0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-perspective: 6000px;
+	text-align: center;
+	background-color: #fe7;
+	width: 24px;
+	height: 24px;
+	color: #999;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: bold;
+	border-radius: 3px;
+	display: inline-block;
+	border: 2px solid #999;
+}

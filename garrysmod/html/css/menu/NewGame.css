@@ -1,0 +1,290 @@
+
+UL.category LI.mapicon IMG.thumbnail
+{
+	width: 128px;
+	height: 128px;
+}
+UL.category LI.mapicon IMG.favtoggle
+{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	visibility: hidden;
+
+	background-image: url( '../../img/favourite.png?1' );
+}
+UL.category LI.mapicon:hover IMG.favtoggle
+{
+	visibility: visible;
+}
+UL.category LI.mapicon IMG.favtoggle_always
+{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+
+	background-image: url( '../../img/favourite.png?1' );
+}
+UL.category LI.mapicon IMG.faviconadd:hover
+{
+	background-image: url( '../../img/favourite_add.png?1' );
+}
+UL.category LI.mapicon IMG.faviconremove:hover
+{
+	background-image: url( '../../img/favourite_remove.png?1' );
+}
+
+UL.category LI.mapicon
+{
+	position: relative;
+	width: 128px;
+	text-align: center;
+	font-size: 10px;
+	padding: 6px;
+	margin: 2px;
+	cursor: pointer;
+	vertical-align: top;
+	color:#fff;
+	background-color: rgba(0,0,0,0.15);
+}
+
+UL.category LI.mapicon span {
+	word-break: break-all;
+}
+
+.maplist
+{
+	right: 256px;
+	top: 16px;
+	left: 16px;
+	bottom: 16px;
+	position: absolute;
+	background-color: rgba(250, 250, 250, 0.52);
+	padding: 10px;
+	border: solid 1px white;
+	border-width: 3px 0px 0px 0px;
+	border-color: #2c87e0;
+}
+
+.maplist .controls
+{
+	width: 190px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	bottom: 10px;
+}
+
+UL.category LI.mapicon.selected
+{
+	background-color: #0071ff4d;
+	border: solid 1px white;
+	border-width: 0px 0px 3px 0px;
+	border-color: #2c87e0;
+}
+
+gamesettings
+{
+	right: 16px;
+	top: 16px;
+	width: 226px;
+	bottom: 16px;
+	position: absolute;
+	border: solid 1px white;
+	border-width: 3px 0px 0px 0px;
+	border-color: #2c87e0;
+	background-color: rgba(250, 250, 250, 0.52);
+	color:#fff;
+}
+
+gamesettings bottom
+{
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+
+gamesettings bottom button
+{
+	left: 16px;
+	right: 16px;
+	bottom: 8px;
+	padding: 10px;
+	position: absolute;
+	margin: 10px;
+	font-size: 20px;
+	width: 77%;
+}
+
+gamesettings select
+{
+	width: 100%;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid #AAA;
+}
+
+.dropdown
+{
+	position: relative;
+	z-index: 100;
+}
+
+.dropdown .label
+{
+    height: 28px;
+    padding-left: 10px;
+    line-height: 28px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #35ca35cc;
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+    border: solid 1px white;
+    border-width: 2px;
+    border-color: #30a522;
+
+}
+
+.dropdown .contents
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 31px;
+	background-color: #fff;
+	border-radius: 4px;
+	border: 1px solid #AAA;
+	display: none;
+	cursor: pointer;
+	font-size: 13px;
+	-webkit-box-shadow: 2px 2px 8px rgba( 0, 0, 0, 0.5 );
+}
+
+.dropdown .contents div
+{
+	padding: 4px 15px;
+}
+
+.dropdown .contents div:hover
+{
+	background-color: #acf;
+}
+
+.caret
+{
+	width: 0;
+	height: 0;
+	vertical-align: top;
+	border-top: 5px solid white;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: "";
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+gamesettings .control
+{
+	margin-top: 8px;
+}
+
+gamesettings .control LABEL
+{
+	font-size: 11px;
+	color: #666;
+}
+
+gamesettings .control input[type=text]
+{
+	width: 100%;
+	padding: 4px;
+}
+
+gamesettings .control-numeric
+{
+	/*height: 20px;*/
+	overflow: hidden;
+	margin-top: 4px;
+}
+
+gamesettings .control-numeric input[type=text]
+{
+	width: 44px;
+	margin-right: 8px;
+	padding: 2px;
+	float: right;
+	height: 20px;
+}
+
+.controls .search
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	padding: 4px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.controls UL
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 32px;
+}
+
+.controls LI.category
+{
+	background-color: #ddd;
+	margin: 0;
+	margin-bottom: 5px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #555;
+	height: 26px;
+	cursor: pointer;
+	position: relative;
+}
+
+.controls LI.active
+{
+	background-color: #9cf;
+	color: #333;
+	border: solid 1px white;
+	border-width: 0px 0px 0px 3px;
+	border-color: #2c87e0;
+}
+
+.controls LI.category .name
+{
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	bottom: 0;
+	right: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.controls LI.category .count
+{
+	float: right;
+	background-color: #ffffff80;
+	padding: 2px 5px;
+	margin: 5px;
+	color: #aaa;
+	font-size: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+}
