@@ -26,9 +26,10 @@ If you got any problem, or if you want to uninstall it, all you ahve to do is to
 ###### Credits ######
  - Gaerisson (me)
  - Original Gmod files
+ - Facepunch
  - Valve
  - Material.io for icons
  - MeepDarknessM (nomusic.lua) https://forum.facepunch.com/f/gmodaddon/jchl/Loading-Screen-sound-remover-CLIENTSIDE/1/
  - OmegaExtern (SourceScheme.res - Original console design)
  - DarthTealc (All Gamemode filter in server browser) https://github.com/Facepunch/garrysmod/pull/992
- 
+ - ? for flat icon16 / icon64 (sorry I don't remember where I took this) :(
