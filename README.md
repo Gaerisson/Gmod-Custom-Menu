@@ -2,7 +2,7 @@
 This is a complete remake of the Gmod Menu, with somes improvements, enjoy :)
 
 ###### Trailer ######
-Soon !
+[![Watch the video](https://i.imgur.com/b95F74u.jpg)](https://youtu.be/LLT_zHAEmtQ)
 
 ###### Images ######
 Soon !
