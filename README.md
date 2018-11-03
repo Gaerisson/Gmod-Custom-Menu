@@ -9,7 +9,7 @@ Soon !
 
 ###### Installation ######
 You need to copy garrysmod in your garrysmod folder, you need to replace the files.
-If you got any problem, or if you want to uninstall it, all you ahve to do is to verify your game content with steam.
+If you got any problem, or if you want to uninstall it, all you have to do is to verify your game content with steam.
 
 ###### Features ######
  - New Design
