@@ -192,7 +192,11 @@ INPUT
 INPUT.searchbox
 {
 	float: right;
+	/* border:0; */
+	/* border-radius: 3px; */
 	height: 24px;
+	/* margin-right: 320px; */
+	/* margin-top: 6px; */
 	margin-top: 8px;
 	padding: 4px;
 	border: 1px solid #006eff;
@@ -251,17 +255,22 @@ UL.category LI.icon
 
 .btn-primary
 {
+	/* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08C), to(#05C)); */
 	border: 1px solid #CCC;
 	border-color: #05C #05C #003580;
 	color: white;
+	/* text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); */
+	/* border-radius: 6px; */
 	cursor: pointer;
 	vertical-align: middle;
+	/* -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); */
 	background-color: rgba(0, 104, 255, 0.6);
 	-webkit-transition: background-color 0.50s;
 }
 
 .btn-primary:hover
 {
+	/* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2ae), to(#27e)); */
 	background-color: #0B63F3;
 	-webkit-transition: background-color 0.50s;
 }
@@ -354,6 +363,7 @@ DIV.disabled
 .whiterounded
 {
 	background-color: rgba(250, 250, 250, 0.52);
+	/* border-radius: 4px; */
 }
 
 pagnation
@@ -401,4 +411,90 @@ loading
 	border-radius: 3px;
 	cursor: pointer;
 	z-index: 1000;
+}
+
+.news {
+	position: absolute;
+	right: 50px;
+	top: 75px;
+}
+
+.news_buttons {
+	margin-top: 3px;
+	display: block;
+}
+.news_buttons div {
+	display: block;
+	float: right;
+	width: 16px;
+	height: 16px;
+	background: #666;
+	margin-left: 3px;
+	box-shadow: 0 0 10px 1px rgba( 0, 0, 0, 0.4 );
+	cursor: hand;
+}
+.news_buttons div.selected {
+	background: #eee;
+}
+
+.news_item {
+	background: #333;
+	background-size: cover;
+	margin-right: 0px;
+	margin-left: auto;
+	box-shadow: 0 0 10px 1px rgba( 0, 0, 0, 0.4 );
+	height: 256px;
+	width: 512px;
+	position:relative;
+}
+
+.news_item div font {
+	font-weight: normal;
+	font-size: small;
+	text-shadow: none;
+	display: block;
+}
+.news_item div span:hover {
+	color: #ffa;
+	cursor: hand;
+}
+.news_item div {
+	background: rgba( 0, 0, 0, 0.4 );
+	display: block;
+	color: #fff;
+	padding: 5px;
+	font-size: x-large;
+	text-align: right;
+	cursor: default;
+	font-weight: bold;
+	text-shadow: 2px 2px 1px #000;
+
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	left: 0;
+}
+
+/* 800x600 and lower */
+@media (max-width: 800px) {
+	.news_item {
+		height: 128px;
+		width: 256px;
+	}
+
+	.news_item div font {
+		font-size: x-small;
+	}
+	.news_item div {
+		font-size: medium;
+	}
+}
+
+/* 640x480 and lower */
+@media (max-width: 640px) {
+	.news {
+		right: 5px;
+		top: 65px;
+	}
 }

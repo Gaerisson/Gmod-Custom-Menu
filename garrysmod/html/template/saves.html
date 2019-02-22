@@ -122,6 +122,8 @@
 							<a class="next" ng-click="Go( PerPage * 1 )">&nbsp;</a>
 						</div>
 
+					<a class="back" ng-click="Go( PerPage * -1 )">&nbsp;</a>
+					<a class="next" ng-click="Go( PerPage * 1 )">&nbsp;</a>
 						<div style="overflow: hidden; margin-top: 3px;">
 							<span ng-repeat="p in Pages">
 								<a ng-show="p == Page" ng-click="GoToPage( p )">

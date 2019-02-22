@@ -127,12 +127,15 @@ function ControllerServers( $scope, $element, $rootScope, $location )
 			lua.Run( "RunConsoleCommand( \"password\", \"" + gm.password + "\" )" )
 
 		lua.Run( "JoinServer( \"" + gm.address + "\" )" )
+		$scope.DoStopRefresh();
 	}
 
 	$scope.SwitchType = function( type )
 	{
 		if ( Scope.ServerType == type ) return;
 
+		// Stop refreshing previous type
+		$scope.DoStopRefresh();
 		var FirstTime = false;
 		if ( !ServerTypes[type] )
 		{
@@ -221,7 +224,7 @@ function AddServer( type, id, ping, name, desc, map, players, maxplayers, botpla
 	var data =
 	{
 		ping:			parseInt( ping ),
-		name:			name,
+		name:			name.trim(),
 		desc:			desc,
 		map:			map,
 		players:		parseInt( players ) - parseInt( botplayers ),

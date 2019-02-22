@@ -147,6 +147,14 @@ DIV.page DIV.options .search_bar
 	}
 }
 
+@media screen and (max-width: 640px) {
+	DIV.page DIV.options
+	{
+		padding-top: 0px;
+		padding-left: 0px;
+	}
+}
+
 /* Pop up confirmation message when uninstalling ALL addons */
 
 body div.modaldialog {

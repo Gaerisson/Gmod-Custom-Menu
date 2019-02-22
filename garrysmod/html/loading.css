@@ -119,7 +119,9 @@ BODY
 
 #progress_text
 {
+	/* position: absolute; */
 	width: 500px;
+	/* right: 170px; */
 	bottom: 0px;
 	margin: 0 auto;
 	text-align: right;
