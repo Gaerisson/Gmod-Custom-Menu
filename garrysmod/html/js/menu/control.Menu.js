@@ -11,7 +11,7 @@ var GamemodeDetails = {}
 var MapIndex = {}
 var AnnSpeed=300;
 var subscriptions = new Subscriptions();
-var menuversion="1215";
+var menuversion="1216";
 
 setTimeout(function(){
 	console.log( "#########################################################" );
