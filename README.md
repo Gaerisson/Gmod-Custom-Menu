@@ -3,6 +3,8 @@
 # Gmod-Custom-Menu
 This is a complete remake of the Gmod Menu, with somes improvements, enjoy :)
 
+*Live DEMO available here: http://gaerisson-softs.fr/Demo_GCM/*
+
 ###### Trailer ######
 [![Watch the video](https://i.imgur.com/b95F74u.jpg)](https://youtu.be/LLT_zHAEmtQ)
 
