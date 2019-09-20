@@ -1,11 +1,12 @@
+![logo](https://i.imgur.com/B4chuit.png)
+
 # Gmod-Custom-Menu
 This is a complete remake of the Gmod Menu, with somes improvements, enjoy :)
 
+*Live DEMO available here: http://gaerisson-softs.fr/Demo_GCM/*
+
 ###### Trailer ######
 [![Watch the video](https://i.imgur.com/b95F74u.jpg)](https://youtu.be/LLT_zHAEmtQ)
-
-###### Images ######
-Soon !
 
 ###### Installation ######
 You need to copy garrysmod in your garrysmod folder, you need to replace the files.
@@ -21,7 +22,14 @@ If you got any problem, or if you want to uninstall it, all you have to do is to
  - Lua script to block musics in loading screen (can be remove by deleting the nomusic.lua in garrysmod/lua/menu)
  - More to come ...
  
- Keep an eye, somes updates will come !
+ Keep an eye on updates !
+ 
+###### Images ######
+![main_menu](https://cdn.discordapp.com/attachments/260156622616133632/488695451361607681/hl2_2018-09-10_01-42-03.jpg)
+![loading_screen](https://i.imgur.com/NmqyYQh.png)
+![fast_connect](https://cdn.discordapp.com/attachments/260156622616133632/489143569198743552/unknown.png)
+![flat_icons](https://i.imgur.com/eyhO9kj.png)
+![4k_support](https://cdn.discordapp.com/attachments/260156622616133632/488790462581440547/unknown.png)
 
 ###### Credits ######
  - Gaerisson (me)
