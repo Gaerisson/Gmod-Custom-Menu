@@ -77,6 +77,7 @@
 				<div class="btn-menu2">
 					<span style="background-image: url('img/main/servers/gamemode.png');padding: 0px 0px 0px 30px;" ng-Tranny="'servers_gamemodes'"></span>
 					<small ng-Tranny="'servers_gamemodes.subtitle'"></small>
+					<input ng-model="Search.name" class="gm_search searchbox" ng-Tranny="'searchbar_placeholder'" />
 				</div>
 			</h1>
 
@@ -96,14 +97,15 @@
 
 				<div class='server_gamemodes whiterounded scrollable'>
 
-					<div class='gamemode {{gamemode.element_class}}' ng-repeat="gamemode in GamemodeList|orderBy:'-(order)'" ng-click="SelectGamemode( gamemode )">
+					<div class='gamemode {{gamemode.element_class}}' ng-repeat="gamemode in GamemodeList|filter:Search|orderBy:'-(order)'" ng-click="SelectGamemode( gamemode )">
 
 						<img ng-src='../gamemodes/{{gamemode.name}}/icon24.png' onerror="MissingGamemodeIcon(this)"/>
 
-						<div class='stats'>{{gamemode.num_players}} <span ng-tranny="'servers_players_on'"></span> {{gamemode.num_servers}} <span ng-tranny="'servers_servers'"></span></div>
+						<div class='stats'>{{gamemode.num_players}} <span ng-tranny="gamemode.num_players == 1 && 'servers_player_on' || 'servers_players_on'"></span> {{gamemode.num_servers}} <span ng-tranny="gamemode.num_servers == 1 && 'servers_server' || 'servers_servers'"></span></div>
 						<div class='name'>
 							{{GamemodeName(gamemode)}}
 						</div>
+					
 
 						<span class='installgamemode' ng-show="ShouldShowInstall( gamemode )" ng-click="InstallGamemode( gamemode );$event.stopPropagation()">&nbsp;</span>
 
@@ -127,14 +129,14 @@
 			<div class='installgamemode' ng-show="ShouldShowInstall( CurrentGamemode )" ng-click="InstallGamemode( CurrentGamemode );$event.stopPropagation()" ng-tranny="'servers_install_gamemode'"></div>
 
 			<div class="controls" style="position: absolute; left: 0px; right: 320px; margin-top: 5px;top: 10px;">
-				<input ng-model="CurrentGamemode.Search.$" class="searchbox" ng-Tranny="'searchbar_placeholer'" />
+				<input ng-model="CurrentGamemode.Search.$" class="searchbox" ng-Tranny="'searchbar_placeholder'" />
 				<!-- <a class='bglink' ng-click="SelectGamemode(null)"><img src='img/bg_arrow_left.png' /> <span ng-tranny="'return_to_gamemodes'"></span></a> -->
 				<a class='bglink' ng-click="SelectGamemode(null)"><span ng-tranny="'filter_by_gamemode'"></span></a>
 			</div>
 
 			<div class='serverlist'>
 
-				<div class='header' style="top: 14px; left: 8px; right: 8px;">
+				<div class='header'>
 					<name ng-click="ChangeOrder( CurrentGamemode, 'name' )" ng-tranny="'server_name_header'"></name>
 					<ping ng-click="ChangeOrder( CurrentGamemode, 'ping' )" ng-tranny="'server_ping'"></ping>
 					<players ng-click="ChangeOrder( CurrentGamemode, '-players' )" ng-tranny="'server_players'"></players>
@@ -143,7 +145,7 @@
 					<rank ng-click="ChangeOrder( CurrentGamemode, 'recommended' )" ng-tranny="'server_ranking'"></rank>
 				</div>
 
-				<div class='body scrollable' style="top: 32px; left: 8px; right: 8px; bottom: 8px;">
+				<div class='body scrollable'>
 
 					<!-- <div ng-repeat="server in CurrentGamemode.servers|filter:CurrentGamemode.Search|orderBy:CurrentGamemode.OrderBy:CurrentGamemode.OrderReverse|limitTo:128" class="server {{ServerClass(server)}} {{IfElse( CurrentGamemode.Selected == server, 'activeserver', '' )}}" ng-click="SelectServer( server )"> -->
 					<div ng-repeat="server in CurrentGamemode.servers|filter:CurrentGamemode.Search|orderBy:CurrentGamemode.OrderBy:CurrentGamemode.OrderReverse|limitTo:256" class="server {{ServerClass(server)}} {{IfElse( CurrentGamemode.Selected == server, 'activeserver', '' )}}" ng-click="SelectServer( server )">

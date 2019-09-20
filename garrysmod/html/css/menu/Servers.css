@@ -230,6 +230,17 @@ H1 small
 	position: absolute;
 	padding-top: 4px;
 	font-size: 11px;
+	top: 8px;
+	left: 8px;
+	right: 8px;
+}
+
+.serverlist .body
+{
+	top: 32px;
+	left: 8px;
+	right: 8px;
+	bottom: 8px;
 }
 
 .serverlist .header ping, .serverlist .header maxplayers, .serverlist .header players, .serverlist .header map, .serverlist .header name, .serverlist .header rank, .serverlist .header gamemode
@@ -296,10 +307,12 @@ A.bglink
 	font-weight: bold;
 	background-color: rgba(0, 132, 255, 0.47);
 	padding: 4px 10px;
-	margin-top: 6px;
+	/* margin-top: 6px; */
 	margin-right: 12px;
 	display: inline-block;
 	font-size: 14px;
+	margin-top: 4px;
+	position: absolute; /*hack to make it appear over the search bar*/
 	float: right;
 	border: 1px solid white;
 	-webkit-transition: border 0.50s, background-color 0.50s;
@@ -470,7 +483,8 @@ SPAN.installgamemode:hover
 	border-width: 4px 0px 0px 0px;
 	position: absolute;
 	left: 0px;
-	top: 50px;
+	/* top: 50px; */
+	top: 64px;
 	bottom: 0px;
 	right: 0px;
 }
@@ -487,4 +501,112 @@ SPAN.installgamemode:hover
 .noplayers
 {
 	opacity: 0.4;
+}
+
+/* Server search box */
+.controls .searchbox, .menuheader .gm_search
+{
+	border-radius: 2px;
+	margin-top: 4px;
+	padding: 7px 10px;
+	border: 1px solid #5af;
+	height: auto;
+	width: 15%;
+	min-width: 150px;
+}
+
+/* Gamemode search box */
+.menuheader .gm_search {
+	margin: 0px;
+}
+
+@media screen and (max-width: 1024px)
+{
+	div.page DIV.innerpage {
+		left: 180px;
+	}
+
+	DIV.page DIV.options {
+		padding-left: 5px;
+	}
+
+	DIV.page DIV.options UL {
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 900px)
+{
+	.serverinfo {
+		width: 200px;
+	}
+	.serverlist {
+		right: 240px;
+	}
+
+	/*sigh*/
+	DIV.installgamemode, INPUT.searchbox {
+		margin-right: 240px;
+	}
+}
+
+/* just make it not unacceptable */
+@media screen and (max-width: 700px)
+{
+	DIV.page DIV.innerpage {
+		right: 5px;
+		top: 5px;
+		bottom: 5px;
+	}
+
+	.serverinfo {
+		padding: 5px;
+		width: 150px;
+	}
+
+	.serverlist {
+		/*padding: 5px;*/
+		right: 160px;
+	}
+
+	.serverlist .header {
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		height: 18px;
+	}
+	.serverlist .body {
+		top: 25px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+	}
+
+	.serverlist name {
+		left: 0px;
+		right: 158px;
+	}
+	.serverlist map {
+		right: 100px; /*overlaps but its 640x480*/
+		width: 56px;
+	}
+	.serverlist players {
+		right: 60px;
+		width: 46px;
+	}
+	.serverlist ping {
+		right: 40px;
+		width: 18px;
+	}
+	.serverlist rank {
+		right: 0px;
+		width: 40px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	DIV.installgamemode, INPUT.searchbox {
+		margin-right: 0px;
+	}
 }
