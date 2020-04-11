@@ -3,6 +3,9 @@
 # Gmod-Custom-Menu
 This is a complete remake of the Gmod Menu, with somes improvements, enjoy :)
 
+**Update 11/04/20**: You have to enable the beta '**x86-64 - Chromuim + 64-bit binaries**' for the menu to work
+![main_menu](https://i.imgur.com/NsrKYd1.png)
+
 *Live DEMO available here: http://gaerisson-softs.fr/Demo_GCM/*
 
 ###### Trailer ######
