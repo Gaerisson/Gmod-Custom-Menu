@@ -10,7 +10,7 @@ var gScope = null;
 var GamemodeDetails = {}
 var MapIndex = {}
 var AnnSpeed=300;
-var menuversion="1231";
+var menuversion="1232";
 
 setTimeout(function(){
 	console.log( "#########################################################" );
