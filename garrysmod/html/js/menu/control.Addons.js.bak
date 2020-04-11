@@ -79,7 +79,6 @@ function ControllerAddons( $scope, $element, $rootScope, $location )
 		subscriptions.SetAllEnabled( true );
 		lua.Run( "steamworks.ApplyAddons();" );
 	}
-
 	$scope.IsEnabled = function( file )
 	{
 		return subscriptions.Enabled( file.id );

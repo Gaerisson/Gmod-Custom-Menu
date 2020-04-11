@@ -192,6 +192,92 @@ loading
 	width: 200px;
 }
 
+.gbrowser-window
+{
+	background-color: #c5c5c5;
+	width: auto;
+	height: auto;
+	position: absolute;
+	left: 200px;
+	margin: 8px 0px 0px 0px;
+	border-radius: 10px;
+	border: solid #fff;
+}
+
+.gbrowser-topbar
+{
+	background-color: #d8d8d8;
+	border-radius: 8px 8px 0px 0px;
+	padding: 5px;
+	border: solid #7b7b7b;
+	border-width: 0px 0px 2px 0px;
+}
+
+.gbrowser-bottombar
+{
+	background-color: #d8d8d8;
+	border-radius: 0px 0px 8px 8px;
+	padding: 5px;
+	border: solid #7b7b7b;
+	border-width: 2px 0px 0px 0px;
+	position: absolute;
+	bottom: 0px;
+	width: auto;
+}
+
+.gbrowser-topbar button
+{
+	cursor: pointer;
+	background-color: #dedede;
+	border: solid #737373;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.gbrowser-topbar button:hover
+{
+	background-color: #4fb3e2;
+}
+
+.gbrowser-favic
+{
+	width: 14px;
+	height: 14px;
+	color: rgb(214, 211, 168);
+	display: inline-block;
+	float: right;
+}
+
+.gbrowser-favic:hover
+{
+	color: rgb(229, 218, 68);
+}
+
+.gbrowser-ficonrem:hover
+{
+	color: rgb(229, 100, 0) !important;
+}
+
+.gbrowser-topbar input
+{
+	background-color: #f9f9f9;
+	border: solid #737373;
+	border-width: 1px;
+	border-radius: 5px;
+	width: 30rem;
+	padding-left: 4px;
+}
+
+.gbrowser-iframe-box
+{
+	background-color: white;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+}
+
 workshopcontainer
 {
 	left: 0px;

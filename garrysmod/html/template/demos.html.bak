@@ -1,5 +1,5 @@
 
-<div class="page" ng-controller="ControllerSaves">
+<div class="page" ng-controller="ControllerDemos">
 
 		<div class="options">
 
@@ -7,7 +7,7 @@
 
 				<li>
 					<div class="btn-menu2">
-						<h2 style="background-image: url('img/main/menu/save.png')" ng-tranny="'saves'"></h2>
+						<h2 style="background-image: url('img/main/menu/video.png')" ng-tranny="'demos'"></h2>
 					</div>
 				</li>
 
@@ -15,57 +15,34 @@
 
 				<li ng-repeat="cat in MyCategories" class="clickable {{IfElse( Category == cat, 'active', 'notactive' )}}">
 					<div class="btn-menu2">
-						<a style="background-image: url('img/main/saves/{{cat}}.png');" ng-click="Switch( cat, 0 )" ng-Tranny="'saves.'+cat" ng-show="cat != ''" class="{{IfElse( Category == cat, 'active', 'notactive' )}}"></a>
+						<a style="background-image: url('img/main/saves/{{cat}}.png');" ng-click="Switch( cat, 0 )" ng-Tranny="'demos.'+cat" ng-show="cat != ''" class="{{IfElse( Category == cat, 'active', 'notactive' )}}"></a>
 					</div>
-
-					<ul ng-show="Category == cat && cat != 'local'" style="margin-top: 4px; margin-bottom: 15px;">
-						<li ng-repeat="tag in SubCategories" class="clickable {{IfElse( Tagged == tag, 'active', 'notactive' )}}">
-							<div class="btn-menu2">
-								<a style="background-image: url('img/main/saves/{{tag}}.png');" ng-click="SwitchWithTag( cat, 0, tag )" ng-Tranny="'saves.'+tag" ng-show="tag != ''" class="{{IfElse( Tagged == tag, 'active', 'notactive' )}}">{{subcat}}</a>
-							</div>
-						</li>
-					</ul>
 				</li>
 
 				<li>&nbsp;</li>
 
 				<li ng-repeat="cat in Categories" class="clickable {{IfElse( Category == cat, 'active', 'notactive' )}}">
 					<div class="btn-menu2">
-						<a style="background-image: url('img/main/saves/{{cat}}.png');" ng-click="Switch( cat, 0 )" ng-Tranny="'saves.'+cat" ng-show="cat != ''" class="{{IfElse( Category == cat, 'active', 'notactive' )}}"></a>
+						<a style="background-image: url('img/main/saves/{{cat}}.png');" ng-click="Switch( cat, 0 )" ng-Tranny="'demos.'+cat" ng-show="cat != ''" class="{{IfElse( Category == cat, 'active', 'notactive' )}}"></a>
 					</div>
-
-					<ul ng-show="Category == cat" style="margin-top: 4px; margin-bottom: 15px;">
-						<li ng-repeat="tag in SubCategories" class="clickable {{IfElse( Tagged == tag, 'active', 'notactive' )}}">
-							<div class="btn-menu2">
-								<a style="background-image: url('img/main/saves/{{tag}}.png');" ng-click="SwitchWithTag( cat, 0, tag )" ng-Tranny="'saves.'+tag" ng-show="tag != ''" class="{{IfElse( Tagged == tag, 'active', 'notactive' )}}">{{subcat}}</a>
-							</div>
-						</li>
-					</ul>
 				</li>
 
 				<li>&nbsp;</li>
 
 				<li ng-repeat="cat in CategoriesSecondary" class="clickable {{IfElse( Category == cat, 'active', 'notactive' )}}">
 					<div class="btn-menu2">
-						<a style="background-image: url('img/main/saves/{{cat}}.png');" ng-click="Switch( cat, 0 )" ng-Tranny="'saves.'+cat" ng-show="cat != ''" class="{{IfElse( Category == cat, 'active', 'notactive' )}}"></a>
+						<a style="background-image: url('img/main/saves/{{cat}}.png');" ng-click="Switch( cat, 0 )" ng-Tranny="'demos.'+cat" ng-show="cat != ''" class="{{IfElse( Category == cat, 'active', 'notactive' )}}"></a>
 					</div>
-
-					<ul ng-show="Category == cat" style="margin-top: 4px; margin-bottom: 15px;">
-						<li ng-repeat="tag in SubCategories" class="clickable {{IfElse( Tagged == tag, 'active', 'notactive' )}}">
-							<div class="btn-menu2">
-								<a style="background-image: url('img/main/saves/{{tag}}.png');" ng-click="SwitchWithTag( cat, 0, tag )" ng-Tranny="'saves.'+tag" ng-show="tag != ''" class="{{IfElse( Tagged == tag, 'active', 'notactive' )}}">{{subcat}}</a>
-							</div>
-						</li>
-					</ul>
 				</li>
 
 				<li>&nbsp;</li>
 
 				<li>
 					<div class="btn-menu2">
-						<a style="background-image: url('img/main/saves/openfolder.png');" ng-click="OpenFolder( 'saves' )" ng-Tranny="'saves.openfolder'"></a>
+						<a style="background-image: url('img/main/saves/openfolder.png');" ng-click="OpenFolder( 'demos' )" ng-Tranny="'demos.openfolder'"></a>
 					</div>
 				</li>
+
 			</ul>
 
 		</div>
@@ -74,15 +51,15 @@
 
 			<h1 class="menuheader">
 				<div class="btn-menu2">
-					<span style="background-image: url('img/main/saves/{{Tagged || Category}}.png');padding: 0px 0px 0px 30px;" ng-Tranny="'saves.'+Category">...</span>
-					<small ng-Tranny="'saves.'+Category + '.subtitle'">...</small>
+					<span style="background-image: url('img/main/saves/{{Tagged || Category}}.png');padding: 0px 0px 0px 30px;" ng-Tranny="'demos.'+Category">...</span>
+					<small ng-Tranny="'demos.'+Category + '.subtitle'">...</small>
 				</div>
 			</h1>
 
 			<workshopcontainer>
 
-				<workshopmessage ng-show="Loading" ng-Tranny="'saves.loading'">...</workshopmessage>
-				<workshopmessage ng-show="TotalResults == 0 && !Loading && !Disabled" ng-Tranny="'saves.none'">...</workshopmessage>
+				<workshopmessage ng-show="Loading" ng-Tranny="'demos.loading'">...</workshopmessage>
+				<workshopmessage ng-show="TotalResults == 0 && !Loading && !Disabled" ng-Tranny="'demos.none'">...</workshopmessage>
 				<workshopmessage ng-show="TotalResults == 0 && !Loading && Disabled" ng-Tranny="'ugc.disabled'">...</workshopmessage>
 
 				<workshopicon ng-hide="Loading" ng-repeat="file in Files" style="width: {{IconWidth|number:0}}px; height: {{IconHeight|number:0}}px" class="{{IfElse( IsSubscribed( file ), 'installed', '' )}}">
@@ -102,14 +79,15 @@
 						<left>
 							<control ng-hide="file.local || file.rated" ng-click="Rate( file, true )"><img src='img/thumb-up.png' /></control>
 							<control ng-hide="file.local || file.rated" ng-click="Rate( file, false )"><img src='img/thumb-down.png' /></control>
-							<control ng-show="file.local" ng-click="PublishLocal( file )" ng-Tranny="'saves.publish'">..</control>
-							<control ng-show="file.local" ng-click="DeleteLocal( file )" ng-Tranny="'saves.delete'">..</control>
+							<control ng-show="file.local" ng-click="PublishLocal( file )" ng-Tranny="'demos.publish'">..</control>
+							<control ng-show="file.local" ng-click="DeleteLocal( file )" ng-Tranny="'demos.delete'">..</control>
 						</left>
 
 						<right>
 							<control ng-show="!file.local && !IsSubscribed( file ) && !Disabled" ng-click="Subscribe( file )" ng-Tranny="'ugc.subscribe'">..</control>
 							<control ng-show="!file.local && IsSubscribed( file )" ng-click="Unsubscribe( file )" ng-Tranny="'ugc.unsubscribe'">..</control>
-							<control ng-click="LoadSave( file )" ng-Tranny="'saves.load'">..</control>
+							<control ng-click="DemoToVideo( file )" ng-Tranny="'demos.video'">..</control>
+							<control ng-click="PlayDemo( file )" ng-Tranny="'demos.play'">..</control>
 						</right>
 
 					</controls>
@@ -119,14 +97,12 @@
 				<center>
 					<pagnation style="bottom: 5px;" ng-hide="Loading || TotalResults == 0">
 						<div class="arr">
-								<a class="back" ng-click="Go( PerPage * -1 )">&nbsp;</a>
+							<a class="back" ng-click="Go( PerPage * -1 )">&nbsp;</a>
 						</div>
 						<div class="arr">
 							<a class="next" ng-click="Go( PerPage * 1 )">&nbsp;</a>
 						</div>
 
-					<a class="back" ng-click="Go( PerPage * -1 )">&nbsp;</a>
-					<a class="next" ng-click="Go( PerPage * 1 )">&nbsp;</a>
 						<div style="overflow: hidden; margin-top: 3px;">
 							<span ng-repeat="p in Pages">
 								<a ng-show="p == Page" ng-click="GoToPage( p )">
@@ -137,6 +113,13 @@
 								</a>
 							</span>
 						</div>
+					<a class="back" ng-click="Go( PerPage * -1 )">&nbsp;</a>
+					<a class="next" ng-click="Go( PerPage * 1 )">&nbsp;</a>
+
+					<div style="overflow: hidden; margin-top: 3px;">
+						<span ng-repeat="p in Pages"><a ng-show="p == Page" ng-click="GoToPage( p )"><img src='img/page_active.png?1' /></a><a ng-hide="p == Page"ng-click="GoToPage( p )"><img src='img/page_active.png?1' style="opacity: 0.5"/></a></span>
+					</div>
+					
 					</pagnation>
 				</center>
 

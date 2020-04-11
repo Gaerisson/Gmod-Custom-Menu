@@ -78,16 +78,3 @@ Subscriptions.prototype.Update = function( json )
 		this.Files[ String( json[k].wsid ) ] = json[ k ];
 	}
 }
-
-// Called from engine for dupes/saves/demos
-Subscriptions.prototype.UpdateUGC = function( json )
-{
-	this.FilesUGC = {};
-
-	for ( k in json )
-	{
-		this.FilesUGC[ String( json[k].wsid ) ] = json[ k ];
-	}
-
-	UpdateDigest( this.Scope, 50 );
-}

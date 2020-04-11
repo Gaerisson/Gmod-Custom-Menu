@@ -43,7 +43,7 @@
 				<li>
 					<div class="btn-menu">
 						<img src="img/main/menu/dupes.png" />
-						<a ng-href="#/dupes/" ng-Tranny="'dupes'"></a>
+						<a ng-href="#/addons/" ng-Tranny="'dupes'"></a>
 					</div>
 				</li>
 

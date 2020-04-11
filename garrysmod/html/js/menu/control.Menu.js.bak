@@ -345,7 +345,7 @@ function UpdateGamemodeInfo( server )
 	// Use the most common title
 	//
 	if ( !gi.titles ) gi.titles = {}
-
+	
 	// First try to see if we have a capitalized version already (i.e. sandbox should be Sandbox)
 	if ( server.desc == server.gamemode.toLowerCase() ) {
 		var names = Object.keys( gi.titles );

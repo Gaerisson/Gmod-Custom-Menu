@@ -96,7 +96,7 @@ hook.Add( "DrawOverlay", "MenuDrawLuaErrors", function()
 		idealy = idealy + 40
 
 		if ( v.last < EndTime ) then
-			Errors[ k ] = nil
+			Errors[k] = nil
 		end
 
 	end

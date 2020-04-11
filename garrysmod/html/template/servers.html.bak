@@ -75,7 +75,7 @@
 
 			<h1 class="menuheader">
 				<div class="btn-menu2">
-					<span style="background-image: url('img/main/servers/gamemode.png');padding: 0px 0px 0px 30px;top: 10px;" ng-Tranny="'servers_gamemodes'"></span>
+					<span style="background-image: url('img/main/servers/gamemode.png');padding: 0px 0px 0px 50px;" ng-Tranny="'servers_gamemodes'"></span>
 					<small ng-Tranny="'servers_gamemodes.subtitle'"></small>
 					<input ng-model="Search.name" class="gm_search searchbox" ng-Tranny="'searchbar_placeholder'" />
 				</div>

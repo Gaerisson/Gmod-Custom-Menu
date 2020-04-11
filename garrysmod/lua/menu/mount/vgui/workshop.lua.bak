@@ -194,7 +194,7 @@ end
 
 function PANEL:SubscriptionsProgress( iCurrent, iTotal )
 
-	self.Label:SetText( "#ugc.fetching" )
+	self.Label:SetText( "Fetching Subscriptions..." )
 	self:SetDrawProgress( true )
 
 	self.Progress = iCurrent / iTotal

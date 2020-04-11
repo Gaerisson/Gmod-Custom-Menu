@@ -610,21 +610,3 @@ SPAN.installgamemode:hover
 		margin-right: 0px;
 	}
 }
-
-name .unfavbutton {
-	background: url( '../../img/favourite.png' );
-	margin-right: 8px;
-	height: 16px;
-	width: 16px;
-	display: inline-block;
-}
-name .unfavbutton:hover {
-	background: url( '../../img/favourite_remove.png' );
-}
-name .unfavbutton.removed {
-	background: url( '../../img/notfavourite.png' );
-}
-name .unfavbutton.removed:hover {
-	background: url( '../../img/notfavourite_add.png' );
-}
-

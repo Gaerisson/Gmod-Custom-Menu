@@ -65,7 +65,7 @@ function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
 		if ( IN_ENGINE )
 		{
 			gmod.DeleteLocal( entry.info.file );
-			gmod.DeleteLocal( entry.background );
+			gmod.DeleteLocal( entry.info.background );
 		}
 
 		$scope.Switch( $scope.Category, $scope.Offset );

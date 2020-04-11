@@ -71,6 +71,7 @@
 			<li>&nbsp;</li>
 
 			<li><button ng-click="SaveSave();" ng-tranny="'save.savegame'" class="savegamebutton {{SaveDisabled}}">..</button></li>
+			<li><smbutton type="button" value="Reload Page" onClick="document.location = 'saves.html'">Goto "GBrowser" Menu</smbutton></li>
 			<li><rfbutton type="button" value="Reload Page" onClick="document.location.reload(true)">Refresh</rfbutton></li>
 
 		</ul>

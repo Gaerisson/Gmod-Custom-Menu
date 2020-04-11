@@ -16,6 +16,7 @@ angular.module( 'tranny', [] )
 					$(element).html( outStr );
 					$(element).attr( "placeholder", outStr );
 				} );
+
 			}
 			else
 			{

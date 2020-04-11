@@ -245,6 +245,21 @@ WorkshopFiles.prototype.ReceiveImage = function( id, url )
 	}
 },
 
+//
+// Receive Vote Info
+//
+WorkshopFiles.prototype.ReceiveVoteInfo = function( id, data )
+{
+	for ( k in this.Scope.Files )
+	{
+		if ( this.Scope.Files[k].id != id ) continue;
+
+		this.Scope.Files[k].vote = data;
+
+		this.Changed();
+	}
+}
+
 WorkshopFiles.prototype.Changed = function()
 {
 	this.Scope.$digest();

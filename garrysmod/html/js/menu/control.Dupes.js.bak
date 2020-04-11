@@ -1,12 +1,12 @@
 
-save = new WorkshopFiles();
+dupe = new WorkshopFiles();
 
-function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
+function ControllerDupes($scope, $rootScope, $location, $timeout, $routeParams)
 {
 	$rootScope.ShowBack = true;
 	Scope = $scope;
 
-	save.Init( 'ws_save', $scope, $rootScope );
+	dupe.Init( 'ws_dupe', $scope, $rootScope );
 
 	$scope.MyCategories =
 	[
@@ -30,10 +30,11 @@ function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
 
 	$scope.SubCategories =
 	[
+		"posed",
 		"scenes",
 		"machines",
+		"vehicles",
 		"buildings",
-		"courses",
 		"others"
 	];
 
@@ -44,12 +45,12 @@ function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
 	$scope.Unsubscribe = function( file ) { subscriptions.Unsubscribe( file.id ); }
 	$scope.IsSubscribed = function( file ) { return subscriptions.Contains( String( file.id ) ); };
 
-	$scope.LoadSave = function( entry )
+	$scope.ArmDupe = function( entry )
 	{
 		if ( !IN_ENGINE ) return;
 
 		if ( entry.local ) {
-			gmod.LoadSave( entry.info.file );
+			gmod.ArmDupe( entry.info.file );
 			return;
 		}
 
@@ -57,7 +58,7 @@ function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
 		// TODO: Some kind of `please wait` while we download 200kb
 		//
 
-		gmod.DownloadSave( entry.info.id );
+		gmod.DownloadDupe( entry.info.fileid );
 	}
 
 	$scope.DeleteLocal = function( entry )
@@ -65,7 +66,7 @@ function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
 		if ( IN_ENGINE )
 		{
 			gmod.DeleteLocal( entry.info.file );
-			gmod.DeleteLocal( entry.background );
+			gmod.DeleteLocal( entry.info.background );
 		}
 
 		$scope.Switch( $scope.Category, $scope.Offset );
@@ -77,11 +78,11 @@ function ControllerSaves($scope, $rootScope, $location, $timeout, $routeParams)
 		{
 			if ( $routeParams.Category )
 			{
-				$timeout( function() { $scope.SwitchWithTag( $routeParams.Category, 0, $routeParams.Tag, $scope.MapName ); }, 100 );
+				$timeout( function() { $scope.SwitchWithTag( $routeParams.Category, 0, $routeParams.Tag ); }, 100 );
 				return;
 			}
 
-			$timeout( function() { $scope.SwitchWithTag( 'local', 0, $scope.MapName ); }, 100 );
+			$timeout( function() { $scope.Switch( 'local', 0 ); }, 100 );
 		}
 		else
 		{

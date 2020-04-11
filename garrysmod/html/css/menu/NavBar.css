@@ -20,8 +20,9 @@
 
 .middle-nav{
 	bottom: 0px;
-	right: 30%;
-	left: 30%;
+	right: 10%;
+	left: 10%;
+	display: block;
 	position: absolute;
 }
 

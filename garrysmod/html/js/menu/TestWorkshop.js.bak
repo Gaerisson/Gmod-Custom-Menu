@@ -14,4 +14,11 @@ function WorkshopTestData( type, namespace )
 
 	namespace.ReceiveImage( 1234, "img/addonpreview.png" );
 	namespace.ReceiveImage( 12345, "../cache/630737834418002174.cache" );
+
+	namespace.ReceiveVoteInfo( "1234", { "score": 0.5, "total": 2, "down": 1, "up": 1 } )
+	namespace.ReceiveVoteInfo( "12345", { "score": 0, "total": 0, "down": 0, "up": 0 } )
+	namespace.ReceiveVoteInfo( "123456", { "score": 0.5146, "total": 3, "down": 0, "up": 3 } )
+	namespace.ReceiveVoteInfo( "1234567", { "score": 0.5098, "total": 2, "down": 0, "up": 2 } )
+	namespace.ReceiveVoteInfo( "3", { "score": 0.5526, "total": 14, "down": 1, "up": 13 } )
+	namespace.ReceiveVoteInfo( "885", { "score": -0.5098, "total": 2, "down": 2, "up": 0 } )
 }

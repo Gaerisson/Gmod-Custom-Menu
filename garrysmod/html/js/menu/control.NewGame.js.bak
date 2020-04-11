@@ -238,8 +238,8 @@ function ControllerNewGame( $scope, $element, $rootScope, $location, $filter )
 			}
 			$scope.ServerSettings.p2p_friendsonly = false;
 			UpdateDigest( $scope, 50 );
-		} else if ( document.getElementById( "p2p_friendsonly" ) !== null ) {
-			document.getElementById( "p2p_friendsonly" ).disabled = false;
+		} else {
+			document.getElementById("p2p_friendsonly").disabled = false;
 		}
 	}
 }
