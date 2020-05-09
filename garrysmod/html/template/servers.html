@@ -77,7 +77,7 @@
 				<div class="btn-menu2">
 					<span style="background-image: url('img/main/servers/gamemode.png');padding: 0px 0px 0px 30px;top: 10px;" ng-Tranny="'servers_gamemodes'"></span>
 					<small ng-Tranny="'servers_gamemodes.subtitle'"></small>
-					<input ng-model="Search.name" class="gm_search searchbox" ng-Tranny="'searchbar_placeholder'" />
+					<input ng-model="GMSearch" class="gm_search searchbox" ng-Tranny="'searchbar_placeholder'" />
 				</div>
 			</h1>
 
@@ -97,7 +97,7 @@
 
 				<div class='server_gamemodes whiterounded scrollable'>
 
-					<div class='gamemode {{gamemode.element_class}}' ng-repeat="gamemode in GamemodeList|filter:Search|orderBy:'-(order)'" ng-click="SelectGamemode( gamemode )">
+					<div class='gamemode {{gamemode.element_class}}' ng-repeat="gamemode in GamemodeList|gamemodeFilter:GMSearch|orderBy:['-(order)', '-(num_players)', 'name' ]" ng-click="SelectGamemode( gamemode )">
 
 						<img ng-src='../gamemodes/{{gamemode.name}}/icon24.png' onerror="MissingGamemodeIcon(this)"/>
 
@@ -147,7 +147,8 @@
 
 				<div class='body scrollable'>
 
-					<div ng-repeat="server in CurrentGamemode.servers|filter:CurrentGamemode.Search|orderBy:CurrentGamemode.OrderBy:CurrentGamemode.OrderReverse|limitTo:256" class="server {{ServerClass(server)}} {{IfElse( CurrentGamemode.Selected == server, 'activeserver', '' )}}" ng-click="SelectServer( server )">
+					<div ng-repeat="server in CurrentGamemode.servers|filter:CurrentGamemode.Search|orderBy:CurrentGamemode.OrderBy:CurrentGamemode.OrderReverse|limitTo:256"
+						class="server {{ServerClass(server)}} {{IfElse( CurrentGamemode.Selected == server, 'activeserver', '' )}}" ng-mouseup="SelectServer( server, $event )" >
 						<name>
 							<a class='unfavbutton {{IfElse( !server.favorite, "removed", "" )}}' ng-show="ServerType == 'favorite'" ng-click="ToggleFavorite( server );$event.stopPropagation();"></a>
 							<img src='img/server-passworded.png' style="margin-right: 8px;" ng-show="server.pass"/>
