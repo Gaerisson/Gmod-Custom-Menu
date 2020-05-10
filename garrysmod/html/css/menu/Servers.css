@@ -482,7 +482,7 @@ SPAN.installgamemode:hover
 	border-color: #2c87e0;
 	border-width: 4px 0px 0px 0px;
 	position: absolute;
-	left: 0px;
+	left: 25px;
 	/* top: 50px; */
 	top: 64px;
 	bottom: 0px;
@@ -513,6 +513,11 @@ SPAN.installgamemode:hover
 	height: auto;
 	width: 15%;
 	min-width: 150px;
+}
+
+.gm_search
+{
+	top: 10px;
 }
 
 /* Gamemode search box */
