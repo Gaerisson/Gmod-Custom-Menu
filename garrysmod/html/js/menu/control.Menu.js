@@ -34,7 +34,7 @@ setTimeout(function(){
 	console.log( "" );
 	console.log( "#########################################################" );
 	console.log( "############## Gmod Custom Menu > Loaded ! ##############" );
-	console.log( "#################### Version > "+menuversion+" ####################" );
+	console.log( "#################### Version > B"+menuversion+" ####################" );
 	console.log( "##### https://github.com/Gaerisson/Gmod-Custom-Menu #####" );
 	console.log( "###### Don't forget to check for update manually ! ######" );
 	console.log( "#########################################################" );
