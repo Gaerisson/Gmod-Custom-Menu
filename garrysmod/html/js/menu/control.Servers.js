@@ -20,7 +20,10 @@ function ControllerServers( $scope, $element, $rootScope, $location )
 	{
 		lua.Run( "DoStopServers( '" + Scope.ServerType + "' )" );
 	}
-
+	$scope.$on( "$destroy", function()
+	{
+		$scope.DoStopRefresh();
+	} );
 	$scope.Refresh = function()
 	{
 		if ( !Scope.ServerType ) return;
@@ -30,8 +33,8 @@ function ControllerServers( $scope, $element, $rootScope, $location )
 		//
 		// Clear out all of the servers
 		//
-		ServerTypes[Scope.ServerType].gamemodes = {};
-		ServerTypes[Scope.ServerType].list.length = 0;
+		ServerTypes[ Scope.ServerType ].gamemodes = {};
+		ServerTypes[ Scope.ServerType ].list.length = 0;
 
 		if ( !IN_ENGINE )
 			TestUpdateServers( Scope.ServerType, RequestNum[ Scope.ServerType ] );
@@ -41,7 +44,7 @@ function ControllerServers( $scope, $element, $rootScope, $location )
 		//
 		lua.Run( "GetServers( '" + Scope.ServerType + "', '" + RequestNum[ Scope.ServerType ] + "' )" );
 
-		Scope.Refreshing[ Scope.ServerType] = "true";
+		Scope.Refreshing[ Scope.ServerType ] = "true";
 		UpdateDigest( Scope, 50 );
 	}
 
@@ -49,7 +52,7 @@ function ControllerServers( $scope, $element, $rootScope, $location )
 	{
 		if ( event && event.which != 1 )
 		{
-			lua.Run( "SetClipboardText( '" + server.name.replace( "'", "\\'") + " @ " + server.address + " - " + server.steamID + " (Anon:" + server.isAnon + ")' )" );
+			lua.Run( "SetClipboardText( '" + server.address + " - " + server.steamID + " (Anon:" + server.isAnon + ")' )" );
 			event.preventDefault();
 			return;
 		}
@@ -130,6 +133,9 @@ function ControllerServers( $scope, $element, $rootScope, $location )
 
 	$scope.JoinServer = function ( srv )
 	{
+	// It's full, why even bother...
+	// if ( srv.players >= srv.maxplayers ) return;
+
 		if ( srv.password )
 			lua.Run( "RunConsoleCommand( \"password\", \"" + srv.password + "\" )" )
 
@@ -247,7 +253,7 @@ function AddServer( type, id, ping, name, desc, map, players, maxplayers, botpla
 		desc:			desc,
 		map:			map,
 		players:		parseInt( players ) - parseInt( botplayers ),
-		maxplayers:		parseInt( maxplayers ),
+		maxplayers:		parseInt( maxplayers ) - parseInt( botplayers ),
 		botplayers:		parseInt( botplayers ),
 		pass:			pass,
 		lastplayed:		parseInt( lastplayed ),
@@ -266,7 +272,9 @@ function AddServer( type, id, ping, name, desc, map, players, maxplayers, botpla
 
 	data.hasmap = DoWeHaveMap( data.map );
 
-	data.recommended = data.ping;
+	data.recommended = 40;
+	if ( data.ping >= 60 ) data.recommended = data.ping;
+
 	if ( data.players == 0 ) data.recommended += 75; // Server is empty
 	if ( data.players >= data.maxplayers ) data.recommended += 100; // Server is full, can't join it
 	if ( data.pass ) data.recommended += 300; // Password protected, can't join it
@@ -325,7 +333,7 @@ function MissingGamemodeIcon( element )
 
 function SetPlayerList( serverip, players )
 {
-	if ( !Scope.CurrentGamemode.Selected ) return;
+	if ( !Scope.CurrentGamemode || !Scope.CurrentGamemode.Selected ) return;
 	if ( Scope.CurrentGamemode.Selected.address != serverip ) return;
 
 	Scope.CurrentGamemode.Selected.playerlist = players

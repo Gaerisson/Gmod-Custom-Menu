@@ -10,20 +10,38 @@ var gScope = null;
 var GamemodeDetails = {}
 var MapIndex = {}
 var AnnSpeed=300;
-var menuversion="1320";
+var menuversion="1321";
 
 setTimeout(function(){
 	console.log( "#########################################################" );
-	console.log( "############### Gmod Custom Menu Loaded ! ###############" );
+	console.log( "" );
+	console.log( "         ~~                                                 " );
+	console.log( "    ~~#####~  -                                             " );
+	console.log( "  ##########~##*~~~                                         " );
+	console.log( "  ~##########~~ #######~~                                   " );
+	console.log( "   #####~~###   #~#######~                                  " );
+	console.log( "   _###~  ###~ -  -######    ######## ######## ##-    ~#~   " );
+	console.log( "    ####- ~   _#########~   ~#      * #-       ####  ####   " );
+	console.log( "     ~   ~~~  ~#########    ~#    ##~ #        #  #### ##   " );
+	console.log( "         ~~~   -~~######    ~#    -~# #        #~  ~~  ##   " );
+	console.log( "     -#~~~~~~~~####~ ~###   ~######## ######## #~      ##   " );
+	console.log( "     -~~~~~~~~~####~ ####     ~~~~~~   ~~~~~~~              " );
+	console.log( "     -~~~~~~#############                                   " );
+	console.log( "     -~~~~~~~~~##########                                   " );
+	console.log( "     -##~~~~~~~##########                                   " );
+	console.log( "      ___-_--- ~~~~~~~~~                                    " );
+	console.log( "" );
+	console.log( "#########################################################" );
+	console.log( "############## Gmod Custom Menu > Loaded ! ##############" );
 	console.log( "##### https://github.com/Gaerisson/Gmod-Custom-Menu #####" );
-	console.log( "##### Don,'t forget to check for update manually :) #####" );
+	console.log( "###### Don't forget to check for update manually ! ######" );
 	console.log( "#########################################################" );
 	window['srvdefbanner']="https://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion;
 	$('#srv-prev')[0].src=window['srvdefbanner'];
 }, 3500);
 
 setInterval(function(){
-	console.log("Updating Banner...");
+	// console.log("Updating Banner...");
 	window['srvdefbanner']="https://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion+"&"+(new Date().getTime());
 	$('#srv-prev')[0].src=window['srvdefbanner'];
 }, 900000); // 15 min
@@ -69,7 +87,7 @@ function AddSmartFavServer( id, name, address, players ){
 }
 
 function FinishedLoadFavServer(){
-	console.log("Finished loading Fav Server !");
+	// console.log("Finished loading Fav Server !");
 	var i=0;
 	for(i=1;i<=7;i++){
 		if(!window['srv'+i+'banner']){

@@ -124,12 +124,12 @@
 				}
 			}
 
-			function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
+			function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, lang )
 			{
 				$("#s_info").append('<img src="img/loading/server.png"></img> ' + servername + '<br>');
 				$("#s_info").append('<img src="img/loading/placeholder.png"></img> ' + mapname + '<br>');
 				$("#s_info").append('<img src="../gamemodes/'+gamemode+'/icon24.png"></img> ' + gamemode + '<br>');
-				$("#st_info").append('<img src="http://vps.gaerisson-softs.fr/API/Steam/'+steamid+'.jpg"></img> <br><a>' + steamid + '</a><br>');
+				$("#st_info").append('<img src="http://srv.gaerisson-softs.fr/API/Steam/'+steamid+'.jpg"></img> <br><a>' + steamid + '</a><br>');
 			}
 			//https://wiki.garrysmod.com/page/Loading_URL
 		</script>

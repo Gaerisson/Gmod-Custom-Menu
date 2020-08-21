@@ -42,11 +42,13 @@
 
 .middle-nav li{
 	max-width: 150px;
-	background-color: rgba(0, 0, 0, 0.47) !important;
+	background-color: rgba(0, 0, 0, 0.35) !important;
 	float:none !important;
 	display:inline-block !important;
 	margin-right: -3px !important;
 	margin-bottom: -3px !important;
+
+	/* -webkit-backdrop-filter: blur(10px); */
 }
 
 .middle-nav p{
@@ -61,12 +63,14 @@
 {
 	position: absolute;
 	bottom: 0px;
-	height: 50px;
+	/* height: 50px; */
 	left: 0;
 	right: 0;
 	/* background-color: rgba( 0, 0, 0, 0.5 ); */
 	/* background-color: rgba(255, 255, 255, 0.13); */
+	background-color: rgba(255, 255, 255, 0.15);
 	/* box-shadow: 0px -1px 3px black; */
+	/* -webkit-backdrop-filter: blur(5px); */
 }
 
 #NavBar UL
@@ -384,7 +388,7 @@ UL.gamemode_list LI
 	display: inherit;
 	margin: 3px;
 	border-radius: 0;
-	background-color: rgba(255, 255, 255, 0.42);
+	background-color: rgba(255, 255, 255, 0.13);
 	margin: 0 2px 2px 0;
 }
 
@@ -481,6 +485,7 @@ UL.language-sm li:hover img
 	text-align: center;
 	border: 2px solid rgba(255, 255, 255, 0.6);
 	border-width: 1px 1px 4px 1px;
+	/* -webkit-backdrop-filter: blur(10px); */
 }
 
 .kinect_settings

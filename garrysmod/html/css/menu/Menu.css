@@ -22,18 +22,33 @@ H1.menuheader{
 
 .btn-menu{
 	background-color: rgba(250, 250, 250, 0.22);
-	border: solid 1px white;
+	border: solid 1px rgba(255, 255, 255, 0.637);
 	padding: 4px 0px 4px 6px;
 	border-width: 0px 0px 0px 2px;
 	margin: 0px 0px -1px 0px;
 	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+	/* -webkit-backdrop-filter: blur(2px); */
 }
 
 .btn-menu:hover{
 	background-color: rgba(250, 250, 250, 0.52);
 	padding: 4px 0px 4px 8px;
 	border-width: 0px 0px 0px 4px;
+	border-color: #2c87e0;
 	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+}
+
+.btn-menu2{
+	margin: -2px 0px -4px 0px;
+}
+
+.btn-menu2 > *{
+	background-repeat: no-repeat;
+	background-position-x: 2px;
+	background-position-y: 0px;
+	background-size: 27px;
+
+	/* -webkit-backdrop-filter: blur(2px); */
 }
 
 .btn-menu a{
@@ -47,6 +62,42 @@ H1.menuheader{
 	bottom: 4px;
 	position: relative;
 	left: 3px;
+}
+
+.btn-menu2 h2{
+	background-color: rgba(255, 255, 255, 0.13);
+	border: solid 1px white;
+	padding: 0px 0px 0px 30px;
+	border-width: 0px 0px 0px 4px;
+	margin: 0px 0px -1px 0px;
+	font-size: 32px !important;
+	letter-spacing: -1.0px !important;
+	text-decoration: none !important;
+	color: #fff !important;
+	text-shadow: none !important;
+	bottom: 4px;
+	position: relative;
+	left: 3px;
+	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+
+	/* -webkit-backdrop-filter: blur(10px); */
+}
+
+.btn-menu2 img{
+	position: relative;
+	top: 27px;
+	left: 10px;
+	z-index: 500;
+}
+
+.btn-menu2 input{
+	background-color: rgba(250, 250, 250, 0.22);
+	border: solid 1px white;
+	border-width: 0px 0px 0px 4px;
+	margin: 3px 0px 1px 0px !important;
+	position: relative;
+	left: 3px;
+	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
 }
 
 .btn-menu2 a{
@@ -63,10 +114,39 @@ H1.menuheader{
 	text-shadow: none !important;
 	position: relative;
 	left: 3px;
-	background-repeat: no-repeat;
-	background-position-x: 2px;
-	background-position-y: -1px;
-	background-size: 27px;
+	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+}
+
+.btn-menu2:hover a{
+	background-color: rgba(250, 250, 250, 0.52);
+	padding: 0px 0px 0px 40px;
+	border-width: 0px 0px 0px 4px;
+	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+}
+
+.btn-menu2-spe{
+	background-color: rgba(250, 250, 250, 0.22);
+	border: solid 1px white;
+	padding: 0px 0px 0px 3px;
+	border-width: 0px 0px 0px 2px;
+	margin: 0px 0px 4px 0px;
+	position: relative;
+	left: 3px;
+	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
+	display: inline-flex;
+	width: 98%;
+}
+
+.btn-menu2-spe label{
+	font-size: 22px !important;
+	letter-spacing: -1.0px !important;
+	text-decoration: none !important;
+	color: #fff !important;
+	text-shadow: none !important;
+}
+
+.btn-menu2-spe:hover{
+	background-color: rgba(250, 250, 250, 0.52);
 	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
 }
 
@@ -85,55 +165,6 @@ H1.menuheader{
 	-webkit-transition: border-color 0.50s, background-color 0.50s;
 }
 
-.btn-menu2:hover a{
-	background-color: rgba(250, 250, 250, 0.52);
-	padding: 0px 0px 0px 40px;
-	border-width: 0px 0px 0px 4px;
-	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
-}
-
-.btn-menu2 h2{
-	background-color: rgba(250, 250, 250, 0.22);
-	border: solid 1px white;
-	padding: 0px 0px 0px 30px;
-	border-width: 0px 0px 0px 4px;
-	margin: 0px 0px -1px 0px;
-	font-size: 32px !important;
-	letter-spacing: -1.0px !important;
-	text-decoration: none !important;
-	color: #fff !important;
-	text-shadow: none !important;
-	bottom: 4px;
-	position: relative;
-	left: 3px;
-	background-repeat: no-repeat;
-	background-position-x: 2px;
-	background-position-y: 5px;
-	background-size: 27px;
-	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
-}
-
-.btn-menu2 img{
-	position: relative;
-	top: 27px;
-	left: 10px;
-	z-index: 500;
-}
-
-.btn-menu2 input{
-	background-color: rgba(250, 250, 250, 0.22);
-	border: solid 1px white;
-	border-width: 0px 0px 0px 4px;
-	margin: 3px 0px 1px 0px !important;
-	position: relative;
-	left: 3px;
-	background-repeat: no-repeat;
-	background-position-x: 2px;
-	background-position-y: -1px;
-	background-size: 27px;
-	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
-}
-
 .btn-menu2 span, .btn-menu2 small{
 	background-color: rgba(250, 250, 250, 0.22);
 	padding: 2px;
@@ -144,10 +175,6 @@ H1.menuheader{
 	text-decoration: none !important;
 	color: #fff !important;
 	text-shadow: none !important;
-	background-repeat: no-repeat;
-	background-position-x: 2px;
-	background-position-y: -1px;
-	background-size: 27px;
 	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
 }
 
@@ -164,10 +191,6 @@ H1.menuheader{
 	border-color: #2c87e0;
 	border-width: 0px 0px 0px 4px;
 	-webkit-transition: padding 0.50s, border-width 0.20s, background-color 0.50s;
-}
-
-.btn-menu2{
-	margin: -2px 0px -4px 0px;
 }
 
 BODY
@@ -228,13 +251,13 @@ UL.category LI:first-child
 	list-style: none;
 	padding: 5px;
 	font-size: 32px;
-	color: #fff;
+	color: #eee;
 }
 
 UL.category LI:first-child small
 {
 	font-size: 14px;
-	color: #fff;
+	color: #f5f5f5;
 }
 
 UL.category LI.icon
@@ -362,7 +385,8 @@ DIV.disabled
 
 .whiterounded
 {
-	background-color: rgba(250, 250, 250, 0.52);
+	background-color: rgba(250, 250, 250, 0.35);
+	/* -webkit-backdrop-filter: blur(10px); */
 	/* border-radius: 4px; */
 }
 
@@ -446,6 +470,7 @@ loading
 	height: 256px;
 	width: 512px;
 	position:relative;
+	opacity: 0.9;
 }
 
 .news_item div font {

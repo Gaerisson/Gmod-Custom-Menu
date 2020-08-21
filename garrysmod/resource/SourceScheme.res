@@ -13,219 +13,224 @@
 //		Borders			- description of all the borders
 //
 ///////////////////////////////////////////////////////////
-"Scheme"
+Scheme
 {
 	//////////////////////// COLORS ///////////////////////////
 	// color details
 	// this is a list of all the colors used by the scheme
-	"Colors"
+	Colors
 	{
 		// base colors
-		"White"											"255 255 255 255"
-		"OffWhite"										"221 221 221 255"
-		"DullWhite"										"190 190 190 255"
-		"Orange"										"255 155 0 255"
-		"TransparentBlack"								"0 0 0 128"
-		"Black"											"0 0 0 255"
+		"White"				"255 255 255 255"
+		"OffWhite"			"221 221 221 255"
+		"DullWhite"			"190 190 190 255"
+		"Orange"			"255 155 0 255"
+		"TransparentBlack"	"0 0 0 128"
+		"Black"				"0 0 0 255"
 
-		"Blank"											"0 0 0 0"
+		"Blank"				"0 0 0 0"
 
-		"SteamLightGreen"								"157 194 80 255"
-		"AchievementsLightGrey"							"79 79 79 255"
-		"AchievementsDarkGrey"							"55 55 55 255"
-		"AchievementsInactiveFG"						"130 130 130 255"
+		"GMod_BG_Opaque"	"40 40 40 250"
+		"GMod_BG"			"108 111 114 0" // SRCDS cannot do transparency, so we gotta replace Blank with this.
+		"GMod_WhiteBlank"	"255 255 255 0"
+
+		"SteamLightGreen"			"157 194 80 255"
+		"AchievementsLightGrey"		"79 79 79 255"
+		"AchievementsDarkGrey"		"55 55 55 255"
+		"AchievementsInactiveFG"	"130 130 130 255"
 	}
 
 	///////////////////// BASE SETTINGS ////////////////////////
 	//
 	// default settings for all panels
 	// controls use these to determine their settings
-	"BaseSettings"
+	BaseSettings
 	{
 		// vgui_controls color specifications
-		Border.Bright									"17 17 17 255"							// the lit side of a control
-		Border.Dark										"17 17 17 255"							// the dark/unlit side of a control
-		Border.Selection								"54 54 54 255"							// the additional border color for displaying the default/selected button
-		Border.DarkSolid								"17 17 17 255"
-		Border.Subtle									"17 17 17 255"
+		Border.Bright					"17 17 17 255"	// the lit side of a control
+		Border.Dark						"17 17 17 255"		// the dark/unlit side of a control
+		Border.Selection				"54 54 54 255"			// the additional border color for displaying the default/selected button
+		Border.DarkSolid				"17 17 17 255"
+		Border.Subtle					"17 17 17 255"
 
-		Button.TextColor								"240 240 240 255"
-		Button.BgColor									"45 45 48 50"
-		Button.ArmedTextColor							"0 122 204 255"
-		Button.ArmedBgColor								"62 62 64 255"				[$WIN32]
-		Button.ArmedBgColor								"62 62 64 255"				[$X360]
-		Button.DepressedTextColor						"18 18 18 255"
-		Button.DepressedBgColor							"0 122 204 255"
-		Button.FocusBorderColor							"Blank"
+		Button.TextColor				"240 240 240 255"
+		Button.BgColor					"45 45 48 50"
+		Button.ArmedTextColor			"0 122 204 255"
+		Button.ArmedBgColor				"62 62 64 255"	[$WIN32]
+		Button.ArmedBgColor				"62 62 64 255"		[$X360]
+		Button.DepressedTextColor		"18 18 18 255"
+		Button.DepressedBgColor			"0 122 204 255"
+		Button.FocusBorderColor			"Blank"
 
-		CheckButton.TextColor							"240 240 240 255"
-		CheckButton.SelectedTextColor					"190 190 190 255"
-		CheckButton.BgColor								"30 30 32 50"
-		CheckButton.Border1								"Border.Subtle"							// the left checkbutton border
-		CheckButton.Border2								"Border.Subtle"							// the right checkbutton border
-		CheckButton.Check								"60 60 62 255"							// color of the check itself
-		CheckButton.HighlightFgColor					"0 122 204 255"
-		CheckButton.ArmedBgColor						"Blank"
-		CheckButton.DepressedBgColor					"Blank"
-		CheckButton.DisabledBgColor						"Black"
+		CheckButton.TextColor			"240 240 240 255"
+		CheckButton.SelectedTextColor	"190 190 190 255"
+		CheckButton.BgColor				"30 30 32 50"
+		CheckButton.Border1				"Border.Subtle" 		// the left checkbutton border
+		CheckButton.Border2				"Border.Subtle"		// the right checkbutton border
+		CheckButton.Check				"60 60 62 255" // color of the check itself
+		CheckButton.DisabledFgColor		"Black"	// color of the check itself when disabled
+		CheckButton.HighlightFgColor	"0 122 204 255"
+		CheckButton.ArmedBgColor		"Blank"
+		CheckButton.DepressedBgColor	"Blank"
+		CheckButton.DisabledBgColor		"180 180 180 255"
 
-		ComboBoxButton.ArrowColor						"0 122 204 255"
-		ComboBoxButton.ArmedArrowColor					"0 60 255 255"
-		ComboBoxButton.BgColor							"Blank"
-		ComboBoxButton.DisabledBgColor					"Blank"
+		ComboBoxButton.ArrowColor		"0 122 204 255"
+		ComboBoxButton.ArmedArrowColor	"0 60 255 255"
+		ComboBoxButton.BgColor			"GMod_WhiteBlank"
+		ComboBoxButton.DisabledBgColor	"GMod_WhiteBlank"
 
-		Frame.TitleTextInsetX							"16"
-		Frame.ClientInsetX								"8"
-		Frame.ClientInsetY								"6"
-		Frame.BgColor									"50 50 50 250"				[$WIN32]
-		Frame.BgColor									"50 50 50 250"				[$X360]
-		Frame.OutOfFocusBgColor							"25 25 25 240"				[$WIN32]
-		Frame.OutOfFocusBgColor							"25 25 25 192"				[$X360]
-		Frame.FocusTransitionEffectTime					"0.3"									// time it takes for a window to fade in/out on focus/out of focus
-		Frame.TransitionEffectTime						"0.3"						[$WIN32]	// time it takes for a window to fade in/out on open/close
-		Frame.TransitionEffectTime						"0.2"						[$X360]		// time it takes for a window to fade in/out on open/close
-		Frame.AutoSnapRange								"0"
-		FrameGrip.Color1								"40 40 42 255"
-		FrameGrip.Color2								"40 40 42 255"
-		FrameTitleButton.FgColor						"255 0 0 204"
-		FrameTitleButton.BgColor						"Blank"
-		FrameTitleButton.DisabledFgColor				"197 64 74 91"
-		FrameTitleButton.DisabledBgColor				"Blank"
-		FrameSystemButton.FgColor						"Blank"
-		FrameSystemButton.BgColor						"Blank"
-		FrameSystemButton.Icon							""
-		FrameSystemButton.DisabledIcon					""
-		FrameTitleBar.Font								"UiBold"					[$WIN32]
-		FrameTitleBar.Font								"DefaultLarge"				[$X360]
-		FrameTitleBar.TextColor							"0 122 204 204"
-		FrameTitleBar.BgColor							"Blank"
-		FrameTitleBar.DisabledTextColor					"0 122 204 91"
-		FrameTitleBar.DisabledBgColor					"Blank"
+		Frame.TitleTextInsetX			16
+		Frame.ClientInsetX				8
+		Frame.ClientInsetY				6
+		Frame.BgColor					"GMod_BG_Opaque"	[$WIN32]
+		Frame.BgColor					"50 50 50 250"		[$X360]
+		Frame.OutOfFocusBgColor			"25 25 25 240"	[$WIN32]
+		Frame.OutOfFocusBgColor			"25 25 25 192"		[$X360]
+		Frame.FocusTransitionEffectTime	"0.3"							// time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime		"0.3"				[$WIN32]	// time it takes for a window to fade in/out on open/close
+		Frame.TransitionEffectTime		"0.2"				[$X360]		// time it takes for a window to fade in/out on open/close
+		Frame.AutoSnapRange				"0"
+		FrameGrip.Color1				"40 40 42 255"
+		FrameGrip.Color2				"40 40 42 255"
+		FrameTitleButton.FgColor		"255 0 0 204"
+		FrameTitleButton.BgColor		"GMod_BG"
+		FrameTitleButton.DisabledFgColor	"197 64 74 91"
+		FrameTitleButton.DisabledBgColor	"GMod_BG"
+		FrameSystemButton.FgColor		"Blank"
+		FrameSystemButton.BgColor		"Blank"
+		FrameSystemButton.Icon			""
+		FrameSystemButton.DisabledIcon	""
+		FrameTitleBar.Font				"UiBold"		[$WIN32]
+		FrameTitleBar.Font				"DefaultLarge"	[$X360]
+		FrameTitleBar.TextColor			"0 122 204 204"
+		FrameTitleBar.BgColor			"GMod_BG"
+		FrameTitleBar.DisabledTextColor	"0 122 204 91"
+		FrameTitleBar.DisabledBgColor	"GMod_BG"
 
-		GraphPanel.FgColor								"0 122 204 255"
-		GraphPanel.BgColor								"17 17 17 150"
+		GraphPanel.FgColor				"0 122 204 255"
+		GraphPanel.BgColor				"17 17 17 150"
 
-		Label.TextDullColor								"190 190 190 255"
-		Label.TextColor									"190 190 190 255"
-		Label.TextBrightColor							"240 240 240 255"
-		Label.SelectedTextColor							"210 210 210 255"
-		Label.BgColor									"Blank"
-		Label.DisabledFgColor1							"90 90 90 255"
-		Label.DisabledFgColor2							"85 85 85 245"
+		Label.TextDullColor				"190 190 190 255"
+		Label.TextColor					"190 190 190 255"
+		Label.TextBrightColor			"240 240 240 255"
+		Label.SelectedTextColor			"210 210 210 255"
+		Label.BgColor					"GMod_BG"
+		Label.DisabledFgColor1			"90 90 90 255"
+		Label.DisabledFgColor2			"85 85 85 245"
 
-		ListPanel.TextColor								"240 240 240 255"
-		ListPanel.TextBgColor							"Blank"
-		ListPanel.BgColor								"12 12 12 50"
-		ListPanel.SelectedTextColor						"0 122 204 255"
-		ListPanel.SelectedBgColor						"50 50 50 204"
-		ListPanel.OutOfFocusSelectedTextColor			"Black"
-		ListPanel.SelectedOutOfFocusBgColor				"132 183 241 100"
-		ListPanel.EmptyListInfoTextColor				"Black"
+		ListPanel.TextColor					"240 240 240 255"
+		ListPanel.TextBgColor				"Blank"
+		ListPanel.BgColor					"12 12 12 50"
+		ListPanel.SelectedTextColor			"0 122 204 255"
+		ListPanel.SelectedBgColor			"50 50 50 204"
+		ListPanel.OutOfFocusSelectedTextColor	"Black"
+		ListPanel.SelectedOutOfFocusBgColor		"132 183 241 100"
+		ListPanel.EmptyListInfoTextColor	"Black"
 
-		Menu.TextColor									"240 240 240 255"
-		Menu.BgColor									"25 25 28 50"
-		Menu.ArmedTextColor								"0 122 204 255"
-		Menu.ArmedBgColor								"40 40 42 255"
-		Menu.TextInset									"6"
+		Menu.TextColor					"240 240 240 255"
+		Menu.BgColor					"25 25 28 50"
+		Menu.ArmedTextColor				"0 122 204 255"
+		Menu.ArmedBgColor				"40 40 42 255"
+		Menu.TextInset					"6"
 
-		Panel.FgColor									"Blank"
-		Panel.BgColor									"Blank"
+		Panel.FgColor					"DullWhite"
+		Panel.BgColor					"GMod_BG"
 
-		ProgressBar.FgColor								"0 122 204 255"
-		ProgressBar.BgColor								"12 12 12 50"
+		ProgressBar.FgColor				"0 122 204 255"
+		ProgressBar.BgColor				"12 12 12 50"
 
-		PropertySheet.TextColor							"240 240 240 240"
-		PropertySheet.SelectedTextColor					"White"
-		PropertySheet.SelectedBgColor					"60 60 60 255"
-		PropertySheet.TransitionEffectTime				"0.25"									// time to change from one tab to another
-		PropertySheet.BgColor							"37 37 37 50"
+		PropertySheet.TextColor				"240 240 240 240"
+		PropertySheet.SelectedTextColor		"White"
+		PropertySheet.SelectedBgColor		"60 60 60 255"
+		PropertySheet.TransitionEffectTime	"0.25"	// time to change from one tab to another
+		PropertySheet.BgColor				"37 37 37 50"
 
-		RadioButton.TextColor							"240 240 240 240"
-		RadioButton.SelectedTextColor					"0 122 204 255"
+		RadioButton.TextColor			"240 240 240 240"
+		RadioButton.SelectedTextColor	"0 122 204 255"
 
 		// Console
-		RichText.TextColor								"210 210 210 255"
-		RichText.BgColor								"12 12 12 150"
-		RichText.SelectedTextColor						"0 122 204 255"
-		RichText.SelectedBgColor						"20 20 20 150"
+		RichText.TextColor				"210 210 210 255"
+		RichText.BgColor				"12 12 12 150"
+		RichText.SelectedTextColor		"0 122 204 255"
+		RichText.SelectedBgColor		"20 20 20 150"
 
-		ScrollBar.Wide									"15"
+		ScrollBar.Wide					15
 
-		ScrollBarButton.FgColor							"Button.FgColor"
-		ScrollBarButton.BgColor							"Button.BgColor"
-		ScrollBarButton.ArmedFgColor					"Button.ArmedFgColor"
-		ScrollBarButton.ArmedBgColor					"Button.ArmedBgColor"
-		ScrollBarButton.DepressedFgColor				"Button.DepressedFgColor"
-		ScrollBarButton.DepressedBgColor				"Button.DepressedBgColor"
+		ScrollBarButton.FgColor				"Button.FgColor"
+		ScrollBarButton.BgColor				"Button.BgColor"
+		ScrollBarButton.ArmedFgColor		"Button.ArmedFgColor"
+		ScrollBarButton.ArmedBgColor		"Button.ArmedBgColor"
+		ScrollBarButton.DepressedFgColor	"Button.DepressedFgColor"
+		ScrollBarButton.DepressedBgColor	"Button.DepressedBgColor"
 
-		ScrollBarSlider.FgColor							"46 46 48 255"							// nob color
-		ScrollBarSlider.BgColor							"29 29 31 255"							// slider background color
+		ScrollBarSlider.FgColor				"46 46 48 255"			// nob color
+		ScrollBarSlider.BgColor				"29 29 31 255"	// slider background color
 
-		SectionedListPanel.HeaderTextColor				"0 122 204 255"
-		SectionedListPanel.HeaderBgColor				"Blank"
-		SectionedListPanel.DividerColor					"0 0 0 150"
-		SectionedListPanel.TextColor					"Button.FgColor"
-		SectionedListPanel.BrightTextColor				"White"
-		SectionedListPanel.BgColor						"17 17 17 50"
+		SectionedListPanel.HeaderTextColor	"0 122 204 255"
+		SectionedListPanel.HeaderBgColor	"Blank"
+		SectionedListPanel.DividerColor		"0 0 0 150"
+		SectionedListPanel.TextColor		"Button.FgColor"
+		SectionedListPanel.BrightTextColor	"White"
+		SectionedListPanel.BgColor			"17 17 17 50"
 		SectionedListPanel.SelectedTextColor			"18 18 18 255"
 		SectionedListPanel.SelectedBgColor				"0 122 204 50"
 		SectionedListPanel.OutOfFocusSelectedTextColor	"18 18 18 230"
 		SectionedListPanel.OutOfFocusSelectedBgColor	"0 122 204 60"
 
-		Slider.NobColor									"46 46 48 255"
-		Slider.TextColor								"Label.TextColor"
-		Slider.TrackColor								"50 50 50 200"
-		Slider.DisabledTextColor1						"Label.DisabledFgColor1"
-		Slider.DisabledTextColor2						"Label.DisabledFgColor2"
+		Slider.NobColor				"46 46 48 255"
+		Slider.TextColor			"Label.TextColor"
+		Slider.TrackColor			"50 50 50 200"
+		Slider.DisabledTextColor1	"Label.DisabledFgColor1"
+		Slider.DisabledTextColor2	"Label.DisabledFgColor2"
 
-		TextEntry.TextColor								"Label.TextColor"
-		TextEntry.BgColor								"33 33 33 50"
-		TextEntry.CursorColor							"0 122 204 240"
-		TextEntry.DisabledTextColor						"DullWhite"
-		TextEntry.DisabledBgColor						"192 192 192 50"
-		TextEntry.SelectedTextColor						"10 10 10 50"
-		TextEntry.SelectedBgColor						"SectionedListPanel.SelectedBgColor"
-		TextEntry.OutOfFocusSelectedBgColor				"SectionedListPanel.OutOfFocusSelectedBgColor"
-		TextEntry.FocusEdgeColor						"TransparentBlack"
+		TextEntry.TextColor			"Label.TextColor"
+		TextEntry.BgColor			"33 33 33 50"
+		TextEntry.CursorColor		"0 122 204 240"
+		TextEntry.DisabledTextColor	"DullWhite"
+		TextEntry.DisabledBgColor	"192 192 192 50"
+		TextEntry.SelectedTextColor	"10 10 10 50"
+		TextEntry.SelectedBgColor	"SectionedListPanel.SelectedBgColor"
+		TextEntry.OutOfFocusSelectedBgColor	"SectionedListPanel.OutOfFocusSelectedBgColor"
+		TextEntry.FocusEdgeColor	"TransparentBlack"
 
-		ToggleButton.SelectedTextColor					"White"
+		ToggleButton.SelectedTextColor	"White"
 
-		Tooltip.TextColor								"Menu.ArmedTextColor"
-		Tooltip.BgColor									"Menu.ArmedBgColor"
+		Tooltip.TextColor			"Menu.ArmedTextColor"
+		Tooltip.BgColor				"Menu.ArmedBgColor"
 
-		TreeView.BgColor								"TransparentBlack"
+		TreeView.BgColor			"TransparentBlack"
 
-		WizardSubPanel.BgColor							"Blank"
+		WizardSubPanel.BgColor		"Blank"
 
 		// scheme-specific colors
-		MainMenu.TextColor								"White"						[$WIN32]
-		MainMenu.TextColor								"200 200 200 255"			[$X360]
-		MainMenu.ArmedTextColor							"200 200 200 255"			[$WIN32]
-		MainMenu.ArmedTextColor							"White"						[$X360]
-		MainMenu.DepressedTextColor						"192 186 80 255"
-		MainMenu.MenuItemHeight							"30"						[$WIN32]
-		MainMenu.MenuItemHeight							"22"						[$X360]
-		MainMenu.MenuItemHeight_hidef					"32"						[$X360]
-		MainMenu.Inset									"32"
-		MainMenu.Backdrop								"0 0 0 156"
+		MainMenu.TextColor			"White"				[$WIN32]
+		MainMenu.TextColor			"200 200 200 255"	[$X360]
+		MainMenu.ArmedTextColor		"200 200 200 255"	[$WIN32]
+		MainMenu.ArmedTextColor		"White"				[$X360]
+		MainMenu.DepressedTextColor	"192 186 80 255"
+		MainMenu.MenuItemHeight		"30"				[$WIN32]
+		MainMenu.MenuItemHeight			"22"				[$X360]
+		MainMenu.MenuItemHeight_hidef	"32"				[$X360]
+		MainMenu.Inset				"32"
+		MainMenu.Backdrop			"0 0 0 156"
 
-		Console.TextColor								"OffWhite"
-		Console.DevTextColor							"White"
+		Console.TextColor			"OffWhite"
+		Console.DevTextColor		"White"
 
-		NewGame.TextColor								"White"
-		NewGame.FillColor								"0 0 0 255"
-		NewGame.SelectionColor							"Orange"					[$WIN32]
-		NewGame.SelectionColor							"0 0 0 255"					[$X360]
-		NewGame.DisabledColor							"128 128 128 196"
+		NewGame.TextColor			"White"
+		NewGame.FillColor			"Black"
+		NewGame.SelectionColor		"Orange"	[$WIN32]
+		NewGame.SelectionColor		"Black"		[$X360]
+		NewGame.DisabledColor		"128 128 128 196"
 
-		MessageDialog.MatchmakingBG						"46 43 42 255"				[$X360]
-		MessageDialog.MatchmakingBGBlack				"22 22 22 255"				[$X360]
+		MessageDialog.MatchmakingBG			"46 43 42 255"	[$X360]
+		MessageDialog.MatchmakingBGBlack			"22 22 22 255"	[$X360]
 
-		MatchmakingMenuItemTitleColor					"200 184 151 255"			[$X360]
-		MatchmakingMenuItemDescriptionColor				"200 184 151 255"			[$X360]
+		MatchmakingMenuItemTitleColor			"200 184 151 255"	[$X360]
+		MatchmakingMenuItemDescriptionColor		"200 184 151 255"	[$X360]
 
-		"QuickListBGDeselected"							"AchievementsDarkGrey"
-		"QuickListBGSelected"							"AchievementsLightGrey"
+		"QuickListBGDeselected"		"AchievementsDarkGrey"
+		"QuickListBGSelected"		"AchievementsLightGrey"
 	}
 
 	//////////////////////// BITMAP FONT FILES /////////////////////////////
@@ -271,10 +276,8 @@
 		{
 			"1"
 			{
-				"name"		 "Lucida Console" [$WINDOWS]
-				"name"		 "Lucida Console" [$X360]
-				"name"		 "Lucida Console" [$OSX]
-				"name"		 "Verdana" [$LINUX]
+				"name"		"Lucida Console" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"14" [$LINUX]
 				"tall"		 "10"
 				"tall_lodef" "15"
@@ -287,8 +290,8 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"16"
 				"weight"	"500"
 			}
@@ -297,8 +300,8 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana Bold" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"16"
 				"weight"	"1000"
 			}
@@ -307,8 +310,8 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"16"
 				"weight"	"500"
 				"underline" "1"
@@ -318,9 +321,10 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
-				"tall"		"12" [!$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
+				"tall"		"12" [$WINDOWS]
+				"tall"		"14" [$OSX]
 				"tall"		"16" [$LINUX]
 				"weight"	"0"
 			}
@@ -329,8 +333,8 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"13"
 				"weight"	"0"
 				"dropshadow" "1"
@@ -340,8 +344,8 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"12"
 				"weight"	"0"
 			}
@@ -351,8 +355,8 @@
 		{
 			"1"
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"18"
 				"weight"	"0"
 			}
@@ -361,8 +365,8 @@
 		{
 			"1"	[$WIN32]
 			{
-				"name"		"Tahoma" [!$LINUX]
-				"name"		"Verdana" [$LINUX]
+				"name"		"Tahoma" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
 				"tall"		"12"
 				"weight"	"1000"
 			}
@@ -487,12 +491,10 @@
 		{
 			"1"
 			{
-				"name"		 "Lucida Console" [$WINDOWS]
-				"name"		 "Lucida Console" [$X360]
-				"name"		 "Lucida Console" [$OSX]
-				"name"		 "Verdana" [$LINUX]
-				"tall"		"14" [$LINUX]
-				"tall"		"10"
+				"name"		"Lucida Console" [$WINDOWS]
+				"name"		"Verdana" [!$WINDOWS]
+				"tall"		"10" [$WINDOWS]
+				"tall"		"14" [!$WINDOWS]
 				"weight"	"500"
 			}
 		}

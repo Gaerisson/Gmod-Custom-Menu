@@ -32,12 +32,16 @@
 					<li>&nbsp;</li>
 
 					<li>
-						<input type="checkbox" ng-model="FilerEnabledOnly" ng-change="HandleFilterChange( 1 )"/>
-						<label ng-Tranny="'addons.enabled_only'"></label>
+						<div class="btn-menu2-spe">
+							<input type="checkbox" ng-model="FilerEnabledOnly" ng-change="HandleFilterChange( 1 )"/>
+							<label ng-Tranny="'addons.enabled_only'"></label>
+						</div>
 					</li>
 					<li>
-						<input type="checkbox" ng-model="FilerDisabledOnly" ng-change="HandleFilterChange( 0 )"/>
-						<label ng-Tranny="'addons.disabled_only'"></label>
+						<div class="btn-menu2-spe">
+							<input type="checkbox" ng-model="FilerDisabledOnly" ng-change="HandleFilterChange( 0 )"/>
+							<label ng-Tranny="'addons.disabled_only'"></label>
+						</div>
 					</li>
 					<!--<li>&nbsp;</li>-->
 
@@ -174,7 +178,7 @@
 		</workshopcontainer>
 
 		<center>
-			<pagnation style="bottom: 25px;"  ng-hide="Loading || TotalResults == 0">
+			<pagnation style="bottom: 25px;" ng-hide="Loading || TotalResults == 0">
 				<div class="arr">
 					<a class="back" ng-click="Go( PerPage * -1 )">&nbsp;</a>
 				</div>
