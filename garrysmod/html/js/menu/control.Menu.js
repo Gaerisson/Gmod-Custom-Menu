@@ -11,6 +11,7 @@ var GamemodeDetails = {}
 var MapIndex = {}
 var AnnSpeed=300;
 var menuversion="1321";
+var bannerurl="https://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion;
 
 setTimeout(function(){
 	console.log( "#########################################################" );
@@ -33,16 +34,17 @@ setTimeout(function(){
 	console.log( "" );
 	console.log( "#########################################################" );
 	console.log( "############## Gmod Custom Menu > Loaded ! ##############" );
+	console.log( "#################### Version > "+menuversion+" ####################" );
 	console.log( "##### https://github.com/Gaerisson/Gmod-Custom-Menu #####" );
 	console.log( "###### Don't forget to check for update manually ! ######" );
 	console.log( "#########################################################" );
-	window['srvdefbanner']="https://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion;
+	window['srvdefbanner']=bannerurl+"&"+(new Date().getTime());
 	$('#srv-prev')[0].src=window['srvdefbanner'];
 }, 3500);
 
 setInterval(function(){
 	// console.log("Updating Banner...");
-	window['srvdefbanner']="https://gaerisson-softs.fr/logos/gmodmenu/banner.php?ver="+menuversion+"&"+(new Date().getTime());
+	window['srvdefbanner']=bannerurl+"&"+(new Date().getTime());
 	$('#srv-prev')[0].src=window['srvdefbanner'];
 }, 900000); // 15 min
 
