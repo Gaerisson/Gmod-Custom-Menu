@@ -5,6 +5,11 @@
 # Gmod-Custom-Menu
 This is a complete remake of the Gmod Menu, with somes improvements, enjoy :)
 
+**Update 21/11/20**: Hello, thanks again for using my menu, it is not fully functional since the last Gmod updates, I need a lot of work to readjust this (I tried for 2/3 hours to update it, but there was alot of change in the base menu since this reskin)
+So actually, I think for now to stop maintaining this menu and work on a new one from the actual version of the menu :/ (if you want to suggest me a template of menu I could try to do, open pull request with an image of a menu template)
+The only problem I have is the time to do it, for now I recommend you uninstall this menu, or copy only the addons / resources folder to have the reskins materials / dark gui (console)
+And again, if any of you want to help me out, you can submit a few pull requests!
+
 **Update 11/04/20**: You have to enable the beta '**x86-64 - Chromuim + 64-bit binaries**' for the menu to work
 ![main_menu](https://i.imgur.com/NsrKYd1.png)
 
