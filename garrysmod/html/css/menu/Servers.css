@@ -318,6 +318,7 @@ A.bglink
 	float: right;
 	border: 1px solid white;
 	-webkit-transition: border 0.50s, background-color 0.50s;
+	user-select: text;
 }
 
 A.bglink:hover
