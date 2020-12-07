@@ -318,6 +318,7 @@ A.bglink
 	float: right;
 	border: 1px solid white;
 	-webkit-transition: border 0.50s, background-color 0.50s;
+	user-select: text;
 }
 
 A.bglink:hover
@@ -325,6 +326,7 @@ A.bglink:hover
 	background-color: rgba(124, 176, 255, 0.68);
 	border: 1px solid #007dff;
 	-webkit-transition: border 0.50s, background-color 0.50s;
+	user-select: text;
 }
 
 .serverinfo
@@ -341,6 +343,7 @@ A.bglink:hover
 	border: 1px solid;
 	border-color: #2c87e0;
 	border-width: 4px 0px 0px 0px;
+	user-select: text;
 }
 
 .serverinfo name
@@ -352,6 +355,7 @@ A.bglink:hover
 	overflow: hidden;
 	width: 100%;
 	letter-spacing: -1px;
+	user-select: text;
 }
 
 .serverinfo button
